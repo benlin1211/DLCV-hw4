@@ -6,10 +6,31 @@ Please click [this link](https://docs.google.com/presentation/d/171DwrrzYUenLnye
 
 To start working on this assignment, you should clone this repository into your local machine by using the following command.
     
-    git clone https://github.com/DLCV-Fall-2022/hw4-<username>.git
+    git clone https://github.com/DLCV-Fall-2022/hw4-benlin1211.git
+
+### List all environments
+
+    conda info --envs
+    
+### Check all package environment
+
+    conda list -n DLCV-hw2
+
+### Close an environment
+
+    conda deactivate
+
+### Remove an environment
+
+    conda env remove -n dlcv-hw4
+    
+You can run the following command to install all the packages listed in the requirements.txt:
+
+    conda create --name dlcv-hw4 python=3.8
+    conda activate dlcv-hw4
+    pip3 install -r requirements.txt
 
 
-Note that you should replace `<username>` with your own GitHub username.
 
 # Data
 please download `hw4_data` from the link below

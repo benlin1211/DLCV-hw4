@@ -8,13 +8,21 @@ To start working on this assignment, you should clone this repository into your 
     
     git clone https://github.com/DLCV-Fall-2022/hw4-benlin1211.git
 
+### Create environment
+You can run the following command to install all the packages listed in the requirements.txt:
+
+    conda create --name dlcv-hw4 python=3.8
+    conda activate dlcv-hw4
+    pip3 install -r requirements.txt
+
+
 ### List all environments
 
     conda info --envs
     
 ### Check all package environment
 
-    conda list -n DLCV-hw2
+    conda list -n DLCV-hw4
 
 ### Close an environment
 
@@ -24,11 +32,6 @@ To start working on this assignment, you should clone this repository into your 
 
     conda env remove -n dlcv-hw4
     
-You can run the following command to install all the packages listed in the requirements.txt:
-
-    conda create --name dlcv-hw4 python=3.8
-    conda activate dlcv-hw4
-    pip3 install -r requirements.txt
 
 
 

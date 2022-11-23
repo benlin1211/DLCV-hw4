@@ -1,0 +1,16 @@
+#Ignore the dataset
+#IMPORTANT: make sure that your dataset is stored in a folder with the same as the one specified below
+
+hw3_data/*
+*png
+*jpg
+*gif
+*.zip
+*.ckpt
+*.pth
+*.csv
+ckpt*/
+log*/
+wandb*/
+__MACOSX
+output*/

@@ -1,11 +1,12 @@
-numpy
+numpy==1.23.3
 scipy
 tqdm
 lpips
 mmcv
-imageio
+Pillow==9.2.0
+imageio==2.22.4
 imageio-ffmpeg
-opencv-python
+opencv-python==4.6.0.66
 torch_efficient_distloss
 torch==1.12.1+cu102
 --find-links https://download.pytorch.org/whl/torch_stable.html   
@@ -13,3 +14,6 @@ ninja
 # torch-scatter
 einops
 foliantcontrib.imagemagick
+
+matplotlib==3.6.1
+torchvision==0.13.1

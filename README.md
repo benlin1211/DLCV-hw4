@@ -22,7 +22,7 @@ You can run the following command to install all the packages listed in the requ
     
 ### Check all package environment
 
-    conda list -n DLCV-hw4
+    conda list -n dlcv-hw4
 
 ### Close an environment
 

@@ -152,11 +152,11 @@ if __name__ == "__main__":
     # Ref: https://github.com/kakaobrain/torchlars
     optimizer = torch.optim.AdamW(learner.parameters(), lr=lr, weight_decay=weight_decay)
     # optimizer = LARS(optim.SGD(learner.parameters(), lr=lr))
+
     # scheduler
     # scheduler = torch.optim.lr_scheduler.StepLR(optimizer, stepLR_step, stepLR_gamma)
-    T_0 = 10 * len(train_dataloader) 
-    # T_max = len(train_dataloader) * n_epochs # a.k.a. w/o restarts
-    T_mult = 90 # 900 epoches to go 
+    T_0 = 10 * len(train_dataloader) # The first warmup period
+    T_mult = 99 # 10*99 = 990 epoches to go 
     scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0, T_mult)
     # https://pytorch.org/docs/stable/generated/torch.optim.lr_scheduler.CosineAnnealingWarmRestarts.html
     

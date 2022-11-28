@@ -88,6 +88,8 @@ def render_viewpoints(test_image_path, gt_image_path):
     gt_paths = sorted(glob.glob(os.path.join(gt_image_path,"*.png")))
 
     for i in tqdm(range(len(img_paths))):
+        print("pred:", img_paths[i], ", gth:",gt_paths[i])
+        
         rgb = imageio.v2.imread(img_paths[i], pilmode='RGBA')
         rgb = (np.array(rgb)/255.).astype(np.float32)
         rgb = rgb[...,:3]*rgb[...,-1:]
@@ -95,8 +97,11 @@ def render_viewpoints(test_image_path, gt_image_path):
         gt = imageio.v2.imread(gt_paths[i], pilmode='RGBA')
         gt = (np.array(gt)/255.).astype(np.float32)
         gt = gt[...,:3]*gt[...,-1:] + (1.-gt[...,-1:])
+        print("pred:", rgb.shape, ", gth:",gt.shape)
+        print("pred:", rgb, ", gth:",gt)
 
         p = -10. * np.log10(np.mean(np.square(rgb - gt)))
+        print("psnr:", p)
         psnrs.append(p)
         ssims.append(rgb_ssim(rgb, gt, max_val=1))
         # lpips_alex.append(rgb_lpips(rgb, gt, net_name='alex', device=device))

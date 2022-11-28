@@ -7,7 +7,8 @@ with open(test_json) as f:
 
 filename = []
 for frame in data["frames"]:
-    filename.append(frame['file_path'])
+    file_path = frame['file_path']
+    filename.append(file_path.split("/")[-1])
 
 print(filename)
 print(len(filename))

@@ -97,8 +97,8 @@ def render_viewpoints(test_image_path, gt_image_path):
         gt = imageio.v2.imread(gt_paths[i], pilmode='RGBA')
         gt = (np.array(gt)/255.).astype(np.float32)
         gt = gt[...,:3]*gt[...,-1:] + (1.-gt[...,-1:])
-        print("pred:", rgb.shape, ", gth:",gt.shape)
-        print("pred:", rgb, ", gth:",gt)
+        #print("pred:", rgb.shape, ", gth:",gt.shape)
+        #print("pred:", rgb, ", gth:",gt)
 
         p = -10. * np.log10(np.mean(np.square(rgb - gt)))
         print("psnr:", p)

@@ -11,6 +11,6 @@ python DirectVoxGO/run_eval.py --datadir $1 --output_dir $2 \
 # # the filename should be same as stated in transform_test.json file. The image size should be the same as training set, 800x800 pixel.
 
 
-# python grade.py './hw4_data/hotdog/val' './output_p1/'
+# python grade.py './output_p1/' './hw4_data/hotdog/val' 
 # # $1 is the path to the folder of generated image (white background)
 # # $2 is the path to the folder of gt image

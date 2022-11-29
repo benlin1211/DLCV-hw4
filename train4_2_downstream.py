@@ -59,7 +59,7 @@ class Mini(Dataset):
         self.mode = mode
         # print("data_path", data_path)
         if self.mode == "train" or self.mode == "val": 
-            path = os.path.join(self.data_path, "train.csv")
+            path = os.path.join(self.data_path, f"{self.mode}.csv")
             self.labels, image_names = read_csv_with_index(path)
             self.image_paths = [os.path.join(data_path, "train", n) for n in image_names]
         else: # test
@@ -85,15 +85,17 @@ def show_n_param(model):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="hw 4-2 train",
                                     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument("--ckpt_path", help="Checkpoint", default= "./ckpt4_2_backbone") 
+    parser.add_argument("--pretrain_path", help="Checkpoint", default= "./ckpt4_2_backbone") 
+    parser.add_argument("--ckpt_path", help="Checkpoint", default= "./ckpt4_2_downstream") 
     
-    parser.add_argument("--data_path", help="data_path", default= "./hw4_data/mini/") 
+    
+    parser.add_argument("--data_path", help="data_path", default= "./hw4_data/office/") 
     parser.add_argument("--batch_size", help="batch size", type=int, default=64)
-    parser.add_argument("--learning_rate", help="learning rate", type=float, default=5e-2) # 原論文說 0.5*batch_size/256
-    parser.add_argument("--weight_decay", help="weight decay", type=float, default=1.5e-6)
-    parser.add_argument("--n_epochs", help="n_epochs", type=int, default=1000) 
+    parser.add_argument("--learning_rate", help="learning rate", type=float, default=5e-5)
+    parser.add_argument("--weight_decay", help="weight decay", type=float, default=1.5e-9)
+    parser.add_argument("--n_epochs", help="n_epochs", type=int, default=50) 
     # ================================= TRAIN =====================================   
-    parser.add_argument("--stepLR_step", help="learning rate decay factor.",type=int, default=50)
+    parser.add_argument("--stepLR_step", help="learning rate decay factor.",type=int, default=1)
     parser.add_argument("--stepLR_gamma", help="learning rate decay factor.",type=float, default=0.998)
                      
     args = parser.parse_args()
@@ -117,6 +119,7 @@ if __name__ == "__main__":
     stepLR_step = args.stepLR_step 
     stepLR_gamma = args.stepLR_gamma
 
+    pretrain_path = args.pretrain_path
     ckpt_path = args.ckpt_path
     os.makedirs(ckpt_path, exist_ok=True)
     data_path = args.data_path
@@ -136,9 +139,17 @@ if __name__ == "__main__":
     # Dataset
     train_dataset = Mini(data_path, tfm, mode='train')
     train_dataloader = DataLoader(train_dataset, batch_size, shuffle=True, num_workers=8)
+    val_dataset = Mini(data_path, tfm, mode='val')
+    val_dataloader = DataLoader(val_dataset, batch_size, shuffle=True, num_workers=8)
     print("Train:", len(train_dataloader))
+    print("Train:", len(val_dataloader))
     # model
     resnet = models.resnet50(pretrained=False)
+    # load pretrain
+    print(f"Load from {pretrain_path}")
+    checkpoint = torch.load(pretrain_path, map_location = device)
+    resnet.load_state_dict(checkpoint['model_state_dict'])
+
     learner = BYOL.BYOL(
         resnet,
         image_size = 128,

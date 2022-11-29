@@ -77,3 +77,16 @@ Example:
     print("Using", device)
     ...
     netG.load_state_dict(torch.load(ckpt_path, map_location='cuda'))
+    
+# Save & Load:
+
+    save_as = os.path.join(ckpt_path, f"model.pth")
+    torch.save({
+            'epoch': epoch,
+            'model_state_dict': learner.state_dict(),
+            'optimizer_state_dict': optimizer.state_dict(),
+            'scheduler_state_dict': scheduler.state_dict(),
+            }, save_as)
+    ...
+    checkpoint = torch.load(ckpt_path, map_location = device)
+    model.load_state_dict(checkpoint['model_state_dict'])

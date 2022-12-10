@@ -144,18 +144,20 @@ if __name__ == "__main__":
     print("Train:", len(train_dataloader))
     print("Train:", len(val_dataloader))
     # model
-    resnet = models.resnet50(pretrained=False)
-    # load pretrain
-    print(f"Load from {pretrain_path}")
-    checkpoint = torch.load(pretrain_path, map_location = device)
-    resnet.load_state_dict(checkpoint['model_state_dict'])
-
+    resnet = models.resnet50(pretrained=False)    
     learner = BYOL.BYOL(
         resnet,
         image_size = 128,
         hidden_layer = 'avgpool',
         use_momentum = False,       # turn off momentum in the target encoder
     )
+    
+    # load pretrain
+    resume = os.path.join(pretrain_path, "BYOL.pth")
+    print(f"Load from {resume}")
+    checkpoint = torch.load(resume, map_location = device)
+    learner.load_state_dict(checkpoint['model_state_dict'])
+
     learner = learner.to(device)
     show_n_param(learner)
 
@@ -174,13 +176,13 @@ if __name__ == "__main__":
     
     loss_curve_train = []
     step = 0
+    loss_curve_val = []
     for epoch in range(n_epochs):
         # ========================= Train ==========================
         learner.train()
         print("Train")
         pbar = tqdm(train_dataloader)
         pbar.set_description(f"Epoch {epoch}|{n_epochs}")
-        
         for data in pbar:
             img, label = data    
             img = img.to(device)
@@ -197,9 +199,29 @@ if __name__ == "__main__":
             loss_curve_train.append(loss.item())
             step+=1
 
+        # ========================= Eval ==========================
+        learner.eval()
+        print("Eval")
+        pbar_val = tqdm(val_dataloader)
+        pbar_val.set_description(f"Epoch {epoch}|{n_epochs}")
+        for data in pbar_val:
+            img, label = data    
+            img = img.to(device)
+            # label = label.to(device)
+            loss = learner(img)
+        
+            optimizer.zero_grad()
+            loss.backward()
+            optimizer.step()
+            scheduler.step()
+
+            # learner.update_moving_average()
+            pbar.set_postfix(loss=loss.item(), lr = optimizer.param_groups[0]['lr'])
+            loss_curve_train.append(loss.item())
+            step+=1
 
         # Save model
-        save_as = os.path.join(ckpt_path, f"BYOL.pth")
+        save_as = os.path.join(ckpt_path, f"downstring.pth")
         torch.save({
                 'epoch': epoch,
                 'model_state_dict': learner.state_dict(),

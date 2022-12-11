@@ -1,3 +1,7 @@
 #!/bin/bash
 python3 .py $1 $2 $3
-# TODO - run your inference Python3 code
+
+# bash hw4_2.sh hw4_data/office/test.csv hw4_data/office/test/ hw4/output_p2/test_pred.csv
+# $1: path to the images csv file (e.g., hw4_data/office/test.csv)
+# $2: path to the folder containing images (e.g. hw4_data/office/test/)
+# $3: path of output csv file (predicted labels) (e.g., hw4/output_p2/test_pred.csv)

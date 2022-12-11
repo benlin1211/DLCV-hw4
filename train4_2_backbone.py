@@ -171,9 +171,9 @@ if __name__ == "__main__":
         pbar.set_description(f"Epoch {epoch}|{n_epochs}")
         
         for data in pbar:
-            img, label = data    
+            img, _ = data # we don't need label!
             img = img.to(device)
-            # label = label.to(device)
+            # _ = _.to(device)
             loss = learner(img)
         
             optimizer.zero_grad()

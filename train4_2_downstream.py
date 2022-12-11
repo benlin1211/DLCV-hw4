@@ -17,8 +17,7 @@ import csv
 import matplotlib.pyplot as plt
 
 from BYOL import BYOL # https://arxiv.org/pdf/2006.07733.pdf
-# from torchlars import LARS # https://github.com/kakaobrain/torchlars
-# from scheduler import cosine
+
 
 def same_seeds(seed):
     # Python built-in random module
@@ -52,7 +51,7 @@ def read_csv_with_index(path):
 
 
 class Mini(Dataset):
-    def __init__(self, data_path, transform, mode='train'):
+    def __init__(self, data_path, transform, label2id, mode='train'):
         super().__init__()
         self.transform = transform
         self.data_path = data_path
@@ -61,9 +60,10 @@ class Mini(Dataset):
         if self.mode == "train" or self.mode == "val": 
             path = os.path.join(self.data_path, f"{self.mode}.csv")
             self.labels, image_names = read_csv_with_index(path)
-            self.image_paths = [os.path.join(data_path, "train", n) for n in image_names]
+            self.image_paths = [os.path.join(data_path, self.mode, n) for n in image_names]
         else: # test
             self.image_paths = glob.glob(os.path.join(self.data_path, "*.jpg"))
+        self.label2id = label2id
     
     def __len__(self):
         return len(self.image_paths)
@@ -73,7 +73,8 @@ class Mini(Dataset):
         img = self.transform(img)
         if self.mode == "train" or self.mode == "val": 
             label = self.labels[idx]
-            return img, label
+
+            return img, int(label2id[label])
         else: # test 
             return img
 
@@ -81,6 +82,19 @@ def show_n_param(model):
     n_parameters = sum(p.numel()
                        for p in model.parameters() if p.requires_grad)
     print(f"Number of params: {n_parameters}")
+
+
+class DownStreamResnet(nn.Module):
+    def __init__(self, n_class=65):
+        super(DownStreamResnet, self).__init__()
+        self.resnet = models.resnet50(pretrained=False)    
+        self.nn = nn.Linear(1000, n_class)
+
+    def forward(self, img):
+        x = self.resnet(img)
+        x = self.nn(x)
+        return x
+
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="hw 4-2 train",
@@ -90,13 +104,13 @@ if __name__ == "__main__":
     
     
     parser.add_argument("--data_path", help="data_path", default= "./hw4_data/office/") 
-    parser.add_argument("--batch_size", help="batch size", type=int, default=64)
+    parser.add_argument("--batch_size", help="batch size", type=int, default=32)
     parser.add_argument("--learning_rate", help="learning rate", type=float, default=5e-5)
     parser.add_argument("--weight_decay", help="weight decay", type=float, default=1.5e-9)
     parser.add_argument("--n_epochs", help="n_epochs", type=int, default=50) 
     # ================================= TRAIN =====================================   
-    parser.add_argument("--stepLR_step", help="learning rate decay factor.",type=int, default=1)
-    parser.add_argument("--stepLR_gamma", help="learning rate decay factor.",type=float, default=0.998)
+    parser.add_argument("--stepLR_step", help="learning rate decay factor.",type=int, default=20)
+    parser.add_argument("--stepLR_gamma", help="learning rate decay factor.",type=float, default=0.9)
                      
     args = parser.parse_args()
     print(vars(args))
@@ -135,59 +149,82 @@ if __name__ == "__main__":
                              std=[0.229,0.224,0.225])
     ])
 
-
+    # create label2id dict
+    with open("./p2_label2id.csv") as f:
+        myCsv = csv.reader(f)
+        label2id = {}
+        for i, (id, label) in enumerate(myCsv):
+            if i==0:
+                continue
+            else:
+                label2id[label] = id
+    print(label2id['Helmet'])
+    
     # Dataset
-    train_dataset = Mini(data_path, tfm, mode='train')
+    train_dataset = Mini(data_path, tfm, label2id, mode='train')
     train_dataloader = DataLoader(train_dataset, batch_size, shuffle=True, num_workers=8)
-    val_dataset = Mini(data_path, tfm, mode='val')
+    val_dataset = Mini(data_path, tfm, label2id, mode='val')
     val_dataloader = DataLoader(val_dataset, batch_size, shuffle=True, num_workers=8)
     print("Train:", len(train_dataloader))
     print("Train:", len(val_dataloader))
     # model
-    resnet = models.resnet50(pretrained=False)    
+    model = DownStreamResnet(n_class=65)
+
+    # load pretrain
+    resnet = models.resnet50(pretrained=False)
     learner = BYOL.BYOL(
         resnet,
         image_size = 128,
         hidden_layer = 'avgpool',
         use_momentum = False,       # turn off momentum in the target encoder
     )
-    
-    # load pretrain
     resume = os.path.join(pretrain_path, "BYOL.pth")
     print(f"Load from {resume}")
     checkpoint = torch.load(resume, map_location = device)
     learner.load_state_dict(checkpoint['model_state_dict'])
+    model.resnet = learner.net
+    del learner, resnet
 
-    learner = learner.to(device)
-    show_n_param(learner)
+    # to device
+    print(model)
+    model = model.to(device)
+    show_n_param(model)
 
     # optimizer 
     # Ref: https://github.com/kakaobrain/torchlars
-    optimizer = torch.optim.AdamW(learner.parameters(), lr=lr, weight_decay=weight_decay)
+    optimizer = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=weight_decay)
     # optimizer = LARS(optim.SGD(learner.parameters(), lr=lr))
 
     # scheduler
-    # scheduler = torch.optim.lr_scheduler.StepLR(optimizer, stepLR_step, stepLR_gamma)
-    T_0 = 10 * len(train_dataloader) # The first warmup period
-    T_mult = 99 # 10*99 = 990 epoches to go 
-    scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0, T_mult)
-    # https://pytorch.org/docs/stable/generated/torch.optim.lr_scheduler.CosineAnnealingWarmRestarts.html
-    
+    # stepLR_step = 20
+    # stepLR_gamma = 0.9
+    scheduler = torch.optim.lr_scheduler.StepLR(optimizer, stepLR_step, stepLR_gamma)
+
     
     loss_curve_train = []
     step = 0
     loss_curve_val = []
+    loss_best = 100
+    criterion = nn.CrossEntropyLoss()
     for epoch in range(n_epochs):
         # ========================= Train ==========================
-        learner.train()
+        model.train()
         print("Train")
         pbar = tqdm(train_dataloader)
         pbar.set_description(f"Epoch {epoch}|{n_epochs}")
         for data in pbar:
             img, label = data    
             img = img.to(device)
-            # label = label.to(device)
-            loss = learner(img)
+            # print(label.shape)
+
+            label = label.to(device)
+            logits = model(img)
+            # pred = torch.argmax(logits, dim=1)
+            # print(pred)
+
+            # print(pred.shape)
+            loss = criterion(logits, label)
+
         
             optimizer.zero_grad()
             loss.backward()
@@ -200,15 +237,21 @@ if __name__ == "__main__":
             step+=1
 
         # ========================= Eval ==========================
-        learner.eval()
+        model.eval()
         print("Eval")
         pbar_val = tqdm(val_dataloader)
         pbar_val.set_description(f"Epoch {epoch}|{n_epochs}")
+        loss_val_epoch = []
         for data in pbar_val:
             img, label = data    
             img = img.to(device)
-            # label = label.to(device)
-            loss = learner(img)
+            # print(label.shape)
+
+            label = label.to(device)
+            logits = model(img)
+            # pred = torch.argmax(logits, dim=1)
+            # print(pred.shape)
+            loss = criterion(logits, label)
         
             optimizer.zero_grad()
             loss.backward()
@@ -217,17 +260,22 @@ if __name__ == "__main__":
 
             # learner.update_moving_average()
             pbar.set_postfix(loss=loss.item(), lr = optimizer.param_groups[0]['lr'])
-            loss_curve_train.append(loss.item())
+            loss_curve_val.append(loss.item())
             step+=1
+            loss_val_epoch.append(loss.item())
 
         # Save model
-        save_as = os.path.join(ckpt_path, f"downstring.pth")
-        torch.save({
-                'epoch': epoch,
-                'model_state_dict': learner.state_dict(),
-                'optimizer_state_dict': optimizer.state_dict(),
-                'scheduler_state_dict': scheduler.state_dict(),
-                }, save_as)
+        loss_val = sum(loss_val_epoch)/len(loss_val_epoch)
+        print(f"Epoch {epoch} Eval loss: {loss_val:.3f}")
+        if loss_best > loss_val:
+            loss_best = loss_val
+            save_as = os.path.join(ckpt_path, f"downstring.pth")
+            torch.save({
+                    'epoch': epoch,
+                    'model_state_dict': model.state_dict(),
+                    'optimizer_state_dict': optimizer.state_dict(),
+                    'scheduler_state_dict': scheduler.state_dict(),
+                    }, save_as)
     
     # plot loss 
     x = list(range(0, len(loss_curve_train)))

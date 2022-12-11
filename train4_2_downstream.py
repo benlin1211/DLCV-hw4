@@ -104,13 +104,13 @@ if __name__ == "__main__":
     
     
     parser.add_argument("--data_path", help="data_path", default= "./hw4_data/office/") 
-    parser.add_argument("--batch_size", help="batch size", type=int, default=32)
+    parser.add_argument("--batch_size", help="batch size", type=int, default=64)
     parser.add_argument("--learning_rate", help="learning rate", type=float, default=5e-5)
     parser.add_argument("--weight_decay", help="weight decay", type=float, default=1.5e-9)
     parser.add_argument("--n_epochs", help="n_epochs", type=int, default=50) 
     # ================================= TRAIN =====================================   
-    parser.add_argument("--stepLR_step", help="learning rate decay factor.",type=int, default=20)
-    parser.add_argument("--stepLR_gamma", help="learning rate decay factor.",type=float, default=0.9)
+    parser.add_argument("--stepLR_step", help="learning rate decay factor.",type=int, default=1)
+    parser.add_argument("--stepLR_gamma", help="learning rate decay factor.",type=float, default=0.998)
                      
     args = parser.parse_args()
     print(vars(args))
@@ -196,9 +196,12 @@ if __name__ == "__main__":
     # optimizer = LARS(optim.SGD(learner.parameters(), lr=lr))
 
     # scheduler
-    # stepLR_step = 20
-    # stepLR_gamma = 0.9
-    scheduler = torch.optim.lr_scheduler.StepLR(optimizer, stepLR_step, stepLR_gamma)
+    # scheduler = torch.optim.lr_scheduler.StepLR(optimizer, stepLR_step, stepLR_gamma)
+    T_0 = 5 * len(train_dataloader) # The first warmup period
+    T_mult = 1 # unit period
+    scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0, T_mult)
+    # https://pytorch.org/docs/stable/generated/torch.optim.lr_scheduler.CosineAnnealingWarmRestarts.html
+    
 
     
     loss_curve_train = []
@@ -252,11 +255,6 @@ if __name__ == "__main__":
             # pred = torch.argmax(logits, dim=1)
             # print(pred.shape)
             loss = criterion(logits, label)
-        
-            optimizer.zero_grad()
-            loss.backward()
-            optimizer.step()
-            scheduler.step()
 
             # learner.update_moving_average()
             pbar.set_postfix(loss=loss.item(), lr = optimizer.param_groups[0]['lr'])

@@ -104,7 +104,7 @@ if __name__ == "__main__":
     
     
     parser.add_argument("--data_path", help="data_path", default= "./hw4_data/office/") 
-    parser.add_argument("--batch_size", help="batch size", type=int, default=64)
+    parser.add_argument("--batch_size", help="batch size", type=int, default=32)
     parser.add_argument("--learning_rate", help="learning rate", type=float, default=5e-5)
     parser.add_argument("--weight_decay", help="weight decay", type=float, default=1.5e-9)
     parser.add_argument("--n_epochs", help="n_epochs", type=int, default=50) 
@@ -197,8 +197,8 @@ if __name__ == "__main__":
 
     # scheduler
     # scheduler = torch.optim.lr_scheduler.StepLR(optimizer, stepLR_step, stepLR_gamma)
-    T_0 = 5 * len(train_dataloader) # The first warmup period
-    T_mult = 1 # unit period
+    T_0 = 0.5 * len(train_dataloader) # The first warmup period
+    T_mult = 1.1 
     scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0, T_mult)
     # https://pytorch.org/docs/stable/generated/torch.optim.lr_scheduler.CosineAnnealingWarmRestarts.html
     

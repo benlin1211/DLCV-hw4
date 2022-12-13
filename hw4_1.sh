@@ -1,9 +1,13 @@
 #!/bin/bash
 # TODO - run your inference Python3 code
 
-python DirectVoxGO/run_eval.py --datadir $1 --output_dir $2 \
- --config ./eval4_1_config.py --render_test --render_only --eval_ssim --eval_lpips_vgg
+python DirectVoxGO/run_eval.py --json_dir $1 --output_dir $2 \
+ --config ./eval4_1_config.py --render_val --render_only --eval_ssim --eval_lpips_vgg
 
+# python DirectVoxGO/run_eval.py --json_dir $1 --output_dir $2 \
+#  --config ./eval4_1_config.py --render_test --render_only --eval_ssim --eval_lpips_vgg
+
+# bash hw4_1.sh './hw4_data/hotdog/trasform_val.json' './output_p1/'
 # bash hw4_1.sh './hw4_data_test/hotdog/trasform_test.json' './output_p1/'
 #
 # # $1: path to the transform_test.json (e.g., */*/transform_test.json)

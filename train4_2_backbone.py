@@ -33,6 +33,7 @@ def same_seeds(seed):
     torch.backends.cudnn.benchmark = False
     torch.backends.cudnn.deterministic = True
 
+
 def read_csv_with_index(path):
     label = []
     filename = []
@@ -89,11 +90,11 @@ if __name__ == "__main__":
     
     parser.add_argument("--data_path", help="data_path", default= "./hw4_data/mini/") 
     parser.add_argument("--batch_size", help="batch size", type=int, default=64)
-    parser.add_argument("--learning_rate", help="learning rate", type=float, default=5e-2) # 原論文說 0.5*batch_size/256
-    parser.add_argument("--weight_decay", help="weight decay", type=float, default=1.5e-6)
+    parser.add_argument("--learning_rate", help="learning rate", type=float, default=1e-3) # 原論文說 0.5*batch_size/256
+    # parser.add_argument("--weight_decay", help="weight decay", type=float, default=1.5e-6)
     parser.add_argument("--n_epochs", help="n_epochs", type=int, default=1000) 
     # ================================= TRAIN =====================================   
-    parser.add_argument("--stepLR_step", help="learning rate decay factor.",type=int, default=50)
+    parser.add_argument("--stepLR_step", help="learning rate decay factor.",type=int, default=100)
     parser.add_argument("--stepLR_gamma", help="learning rate decay factor.",type=float, default=0.998)
                      
     args = parser.parse_args()
@@ -111,7 +112,7 @@ if __name__ == "__main__":
     # args
     batch_size = args.batch_size
     lr = args.learning_rate
-    weight_decay = args.weight_decay
+    # weight_decay = args.weight_decay
     n_epochs = args.n_epochs
 
     stepLR_step = args.stepLR_step 
@@ -150,14 +151,16 @@ if __name__ == "__main__":
 
     # optimizer 
     # Ref: https://github.com/kakaobrain/torchlars
-    optimizer = torch.optim.AdamW(learner.parameters(), lr=lr, weight_decay=weight_decay)
+    # optimizer = torch.optim.AdamW(learner.parameters(), lr=lr, weight_decay=weight_decay)
     # optimizer = LARS(optim.SGD(learner.parameters(), lr=lr))
+    optimizer = torch.optim.SGD(learner.parameters(), lr=0.03, momentum=0.9)
+
 
     # scheduler
-    # scheduler = torch.optim.lr_scheduler.StepLR(optimizer, stepLR_step, stepLR_gamma)
-    T_0 = 10 * len(train_dataloader) # The first warmup period
-    T_mult = 99 # 10*99 = 990 epoches to go 
-    scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0, T_mult)
+    scheduler = torch.optim.lr_scheduler.StepLR(optimizer, stepLR_step, stepLR_gamma)
+    # T_0 = 10 * len(train_dataloader) # The first warmup period
+    # T_mult = 99 # 10*99 = 990 epoches to go 
+    # scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0, T_mult)
     # https://pytorch.org/docs/stable/generated/torch.optim.lr_scheduler.CosineAnnealingWarmRestarts.html
     
     

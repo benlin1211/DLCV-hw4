@@ -105,12 +105,12 @@ if __name__ == "__main__":
     
     parser.add_argument("--data_path", help="data_path", default= "./hw4_data/office/") 
     parser.add_argument("--batch_size", help="batch size", type=int, default=32)
-    parser.add_argument("--learning_rate", help="learning rate", type=float, default=5e-5)
-    parser.add_argument("--weight_decay", help="weight decay", type=float, default=1.5e-9)
-    parser.add_argument("--n_epochs", help="n_epochs", type=int, default=50) 
+    parser.add_argument("--learning_rate", help="learning rate", type=float, default=1e-7)
+    parser.add_argument("--weight_decay", help="weight decay", type=float, default=1e-9)
+    parser.add_argument("--n_epochs", help="n_epochs", type=int, default=100) 
     # ================================= TRAIN =====================================   
-    parser.add_argument("--stepLR_step", help="learning rate decay factor.",type=int, default=1)
-    parser.add_argument("--stepLR_gamma", help="learning rate decay factor.",type=float, default=0.998)
+    parser.add_argument("--stepLR_step", help="learning rate decay factor.",type=int, default=10000)
+    parser.add_argument("--stepLR_gamma", help="learning rate decay factor.",type=float, default=0.99)
                      
     args = parser.parse_args()
     print(vars(args))
@@ -166,7 +166,7 @@ if __name__ == "__main__":
     val_dataset = Mini(data_path, tfm, label2id, mode='val')
     val_dataloader = DataLoader(val_dataset, batch_size, shuffle=True, num_workers=8)
     print("Train:", len(train_dataloader))
-    print("Train:", len(val_dataloader))
+    print("Val:", len(val_dataloader))
     # model
     model = DownStreamResnet(n_class=65)
 
@@ -192,14 +192,15 @@ if __name__ == "__main__":
 
     # optimizer 
     # Ref: https://github.com/kakaobrain/torchlars
-    optimizer = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=weight_decay)
+    # optimizer = torch.optim.AdamW(model.parameters(), lr=lr, weight_decay=weight_decay)
+    optimizer = torch.optim.SGD(model.parameters(), lr=lr , momentum = 0.9)
     # optimizer = LARS(optim.SGD(learner.parameters(), lr=lr))
 
     # scheduler
-    # scheduler = torch.optim.lr_scheduler.StepLR(optimizer, stepLR_step, stepLR_gamma)
-    T_0 = 0.5 * len(train_dataloader) # The first warmup period
-    T_mult = 1.1 
-    scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0, T_mult)
+    scheduler = torch.optim.lr_scheduler.StepLR(optimizer, stepLR_step, stepLR_gamma)
+    # T_0 = 1 * len(train_dataloader) # The first warmup period
+    # T_mult = 2
+    # scheduler = torch.optim.lr_scheduler.CosineAnnealingWarmRestarts(optimizer, T_0, T_mult)
     # https://pytorch.org/docs/stable/generated/torch.optim.lr_scheduler.CosineAnnealingWarmRestarts.html
     
 
@@ -252,8 +253,9 @@ if __name__ == "__main__":
 
             label = label.to(device)
             logits = model(img)
-            # pred = torch.argmax(logits, dim=1)
-            # print(pred.shape)
+            pred = torch.argmax(logits, dim=1).detach().cpu().numpy()
+            # print(pred)
+            # print(label)
             loss = criterion(logits, label)
 
             # learner.update_moving_average()
@@ -266,8 +268,9 @@ if __name__ == "__main__":
         loss_val = sum(loss_val_epoch)/len(loss_val_epoch)
         print(f"Epoch {epoch} Eval loss: {loss_val:.3f}")
         if loss_best > loss_val:
+            print("Save model")
             loss_best = loss_val
-            save_as = os.path.join(ckpt_path, f"downstring.pth")
+            save_as = os.path.join(ckpt_path, f"downstring_Cosine_Annealing.pth")
             torch.save({
                     'epoch': epoch,
                     'model_state_dict': model.state_dict(),
@@ -276,12 +279,12 @@ if __name__ == "__main__":
                     }, save_as)
     
     # plot loss 
-    x = list(range(0, len(loss_curve_train)))
-    plt.plot(x, loss_curve_train)
-    plt.xlabel('step')
-    plt.ylabel('loss')
-    plt.title("Train 4-2 backbone loss curve")
-    plt.savefig("./Train_loss_4_2.png")
+    # x = list(range(0, len(loss_curve_train)))
+    # plt.plot(x, loss_curve_train)
+    # plt.xlabel('step')
+    # plt.ylabel('loss')
+    # plt.title("Train 4-2 backbone loss curve")
+    # plt.savefig("./Train_loss_4_2.png")
 
 
 

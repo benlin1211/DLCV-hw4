@@ -7,8 +7,8 @@ python DirectVoxGO/run_eval.py --json_dir $1 --output_dir $2 \
 # python DirectVoxGO/run_eval.py --json_dir $1 --output_dir $2 \
 #  --config ./eval4_1_config.py --render_test --render_only --eval_ssim --eval_lpips_vgg
 
-# bash hw4_1.sh './hw4_data/hotdog/trasform_val.json' './output_p1/'
-# bash hw4_1.sh './hw4_data_test/hotdog/trasform_test.json' './output_p1/'
+# bash hw4_1.sh './hw4_data/hotdog/transforms_val.json' './output_p1/'
+# bash hw4_1.sh './hw4_data_test/hotdog/transforms_test.json' './output_p1/'
 #
 # # $1: path to the transform_test.json (e.g., */*/transform_test.json)
 # # which contains camera poses with the same format as in transfor_train.json, you should predict novel views base on this file.

@@ -14,6 +14,7 @@ from torchvision import models
 import torchvision.transforms as transforms
 import numpy as np
 import csv
+import pandas as pd
 import matplotlib.pyplot as plt
 
 from BYOL import BYOL # https://arxiv.org/pdf/2006.07733.pdf
@@ -101,7 +102,7 @@ class DownStreamResnet(nn.Module):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="hw 4-2 train",
                                     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument("--resume_path", help="Checkpoint", default= "./ckpt4_2_downstream/downstring_Cosine_Annealing.pth") 
+    parser.add_argument("--resume_path", help="Checkpoint", default= "./ckpt4_2_downstream/downstring_SGD.pth") 
     
     
     parser.add_argument("--data_path", help="data_path", default= "./hw4_data/office/val") 
@@ -128,6 +129,11 @@ if __name__ == "__main__":
 
     resume_path = args.resume_path
     csv_path = args.csv_path
+    output_name = args.output_name
+    # create folder
+    sub = output_name.split("/")[-1]
+    output_path = output_name.replace(sub,'')
+    os.makedirs(output_path, exist_ok=True)
     data_path = args.data_path
 
     with open(csv_path) as f:
@@ -170,7 +176,7 @@ if __name__ == "__main__":
     
     # Dataset
     val_dataset = Mini(data_path, tfm, label2id, mode='test')
-    val_dataloader = DataLoader(val_dataset, batch_size, shuffle=True, num_workers=8)
+    val_dataloader = DataLoader(val_dataset, batch_size, shuffle=False, num_workers=8)
 
     print("Val:", len(val_dataloader))
     # model
@@ -210,11 +216,20 @@ if __name__ == "__main__":
     prediction = []
     for i in range(result.shape[0]):
         
-        print(filenames[i])
+        # print(filenames[i])
         _class = id2label[result[i]]
         prediction.append(_class)
-        print(result[i])
-        print(_class)
+        # print(result[i])
+        # print(_class)
+
+    df = pd.DataFrame() # apply pd.DataFrame format 
+    df["filename"] = filenames
+    df["label"] = prediction
+    df.to_csv(output_name, index = True)
+    
+    
+
+
         
 
 

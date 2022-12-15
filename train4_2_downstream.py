@@ -85,9 +85,9 @@ def show_n_param(model):
 
 
 class DownStreamResnet(nn.Module):
-    def __init__(self, n_class=65):
+    def __init__(self, n_class=65, is_pretrain=False):
         super(DownStreamResnet, self).__init__()
-        self.resnet = models.resnet50(pretrained=False)    
+        self.resnet = models.resnet50(pretrained=is_pretrain)    
         self.nn = nn.Linear(1000, n_class)
 
     def forward(self, img):
@@ -99,17 +99,17 @@ class DownStreamResnet(nn.Module):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="hw 4-2 train",
                                     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument("--pretrain_path", help="Checkpoint", default= "./ckpt4_2_backbone") 
+    parser.add_argument("--pretrain_path", help="Checkpoint", default= "./ckpt4_2_naive_backbone") 
     parser.add_argument("--ckpt_path", help="Checkpoint", default= "./ckpt4_2_downstream") 
     
     
     parser.add_argument("--data_path", help="data_path", default= "./hw4_data/office/") 
-    parser.add_argument("--batch_size", help="batch size", type=int, default=32)
-    parser.add_argument("--learning_rate", help="learning rate", type=float, default=1e-7)
-    parser.add_argument("--weight_decay", help="weight decay", type=float, default=1e-9)
+    parser.add_argument("--batch_size", help="batch size", type=int, default=16)
+    parser.add_argument("--learning_rate", help="learning rate", type=float, default=3e-4)
+    # parser.add_argument("--weight_decay", help="weight decay", type=float, default=1e-9)
     parser.add_argument("--n_epochs", help="n_epochs", type=int, default=100) 
     # ================================= TRAIN =====================================   
-    parser.add_argument("--stepLR_step", help="learning rate decay factor.",type=int, default=10000)
+    parser.add_argument("--stepLR_step", help="learning rate decay factor.",type=int, default=100)
     parser.add_argument("--stepLR_gamma", help="learning rate decay factor.",type=float, default=0.99)
                      
     args = parser.parse_args()
@@ -127,7 +127,7 @@ if __name__ == "__main__":
     # args
     batch_size = args.batch_size
     lr = args.learning_rate
-    weight_decay = args.weight_decay
+    # weight_decay = args.weight_decay
     n_epochs = args.n_epochs
 
     stepLR_step = args.stepLR_step 
@@ -164,29 +164,21 @@ if __name__ == "__main__":
     train_dataset = Mini(data_path, tfm, label2id, mode='train')
     train_dataloader = DataLoader(train_dataset, batch_size, shuffle=True, num_workers=8)
     val_dataset = Mini(data_path, tfm, label2id, mode='val')
-    val_dataloader = DataLoader(val_dataset, batch_size, shuffle=True, num_workers=8)
+    val_dataloader = DataLoader(val_dataset, batch_size, shuffle=False, num_workers=8)
     print("Train:", len(train_dataloader))
     print("Val:", len(val_dataloader))
     # model
-    model = DownStreamResnet(n_class=65)
+    model = DownStreamResnet(n_class=65, is_pretrain=False)
 
     # load pretrain
-    resnet = models.resnet50(pretrained=False)
-    learner = BYOL.BYOL(
-        resnet,
-        image_size = 128,
-        hidden_layer = 'avgpool',
-        use_momentum = False,       # turn off momentum in the target encoder
-    )
-    resume = os.path.join(pretrain_path, "BYOL.pth")
+    resume = os.path.join(pretrain_path, "improved-net.pt")
     print(f"Load from {resume}")
     checkpoint = torch.load(resume, map_location = device)
-    learner.load_state_dict(checkpoint['model_state_dict'])
-    model.resnet = learner.net
-    del learner, resnet
+    model.resnet.load_state_dict(checkpoint)
+
 
     # to device
-    print(model)
+    # print(model)
     model = model.to(device)
     show_n_param(model)
 
@@ -246,6 +238,9 @@ if __name__ == "__main__":
         pbar_val = tqdm(val_dataloader)
         pbar_val.set_description(f"Epoch {epoch}|{n_epochs}")
         loss_val_epoch = []
+
+        count=0
+        total=0
         for data in pbar_val:
             img, label = data    
             img = img.to(device)
@@ -254,8 +249,14 @@ if __name__ == "__main__":
             label = label.to(device)
             logits = model(img)
             pred = torch.argmax(logits, dim=1).detach().cpu().numpy()
-            # print(pred)
-            # print(label)
+            if epoch>5:
+                print(pred)
+                print(label)
+            for p,l in zip(pred, label):
+                if p==l:
+                    count+=1
+                total+=1
+                
             loss = criterion(logits, label)
 
             # learner.update_moving_average()
@@ -266,11 +267,11 @@ if __name__ == "__main__":
 
         # Save model
         loss_val = sum(loss_val_epoch)/len(loss_val_epoch)
-        print(f"Epoch {epoch} Eval loss: {loss_val:.3f}")
+        print(f"Epoch {epoch} Eval loss: {loss_val:.3f}, Acc: {count/total}")
         if loss_best > loss_val:
             print("Save model")
             loss_best = loss_val
-            save_as = os.path.join(ckpt_path, f"downstring_Cosine_Annealing.pth")
+            save_as = os.path.join(ckpt_path, f"downstring_SGD.pth")
             torch.save({
                     'epoch': epoch,
                     'model_state_dict': model.state_dict(),

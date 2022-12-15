@@ -259,7 +259,6 @@ if __name__=='__main__':
         device = torch.device("cuda")
     else:
         device = torch.device("cpu")
-    device = torch.device("cpu")
     seed_everything()
 
     # # load images / poses / camera settings / data split
@@ -323,6 +322,7 @@ if __name__=='__main__':
             model_class = dvgo.DirectVoxGO
         model = utils.load_model(model_class, ckpt_path).to(device)
         stepsize = cfg.fine_model_and_render.stepsize
+        stepsize = 2
         print("stepsize 123", stepsize)
         render_viewpoints_kwargs = {
             'model': model,

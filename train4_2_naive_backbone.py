@@ -82,11 +82,11 @@ def show_n_param(model):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="hw 4-2 train",
                                     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument("--ckpt_path", help="Checkpoint", default= "./ckpt4_2_naive_backbone") 
+    parser.add_argument("--ckpt_path", help="Checkpoint", default= "./ckpt4_2_backbone_005") 
     
     parser.add_argument("--data_path", help="data_path", default= "./hw4_data/mini/") 
     parser.add_argument("--batch_size", help="batch size", type=int, default=64)
-    parser.add_argument("--learning_rate", help="learning rate", type=float, default=3e-4)
+    parser.add_argument("--learning_rate", help="learning rate", type=float, default=0.05)
     # parser.add_argument("--weight_decay", help="weight decay", type=float, default=1.5e-6)
     parser.add_argument("--n_epochs", help="n_epochs", type=int, default=100) 
 
@@ -155,4 +155,6 @@ if __name__ == "__main__":
             learner.update_moving_average() # update moving average of target encoder
 
     # save your improved network
-    torch.save(resnet.state_dict(), './improved-net.pt')
+    save_as = os.path.join(ckpt_path,'improved-net.pt')
+    print(f"Save at {save_as}")
+    torch.save(resnet.state_dict(), save_as)

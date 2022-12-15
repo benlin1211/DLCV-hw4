@@ -7,6 +7,7 @@ hw3_data/*
 *gif
 *.zip
 *.ckpt
+*.pt
 *.pth
 *.tar
 ckpt*/

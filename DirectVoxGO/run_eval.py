@@ -322,7 +322,7 @@ if __name__=='__main__':
             model_class = dvgo.DirectVoxGO
         model = utils.load_model(model_class, ckpt_path).to(device)
         stepsize = cfg.fine_model_and_render.stepsize
-        stepsize = 2
+        # stepsize = 3
         print("stepsize 123", stepsize)
         render_viewpoints_kwargs = {
             'model': model,

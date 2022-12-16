@@ -110,7 +110,7 @@ if __name__ == "__main__":
     
     # ================================= TRAIN ===================================== 
     parser.add_argument("--data_path", help="data_path", default= "./hw4_data/office/") 
-    parser.add_argument("--batch_size", help="batch size", type=int, default=8)
+    parser.add_argument("--batch_size", help="batch size", type=int, default=16)
     parser.add_argument("--learning_rate", help="learning rate", type=float, default=3e-4)
     # parser.add_argument("--weight_decay", help="weight decay", type=float, default=1e-9)
     parser.add_argument("--n_epochs", help="n_epochs", type=int, default=100) 

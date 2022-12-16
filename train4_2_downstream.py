@@ -99,16 +99,20 @@ class DownStreamResnet(nn.Module):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="hw 4-2 train",
                                     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument("--pretrain_path", help="Checkpoint", default= "./ckpt4_2_naive_backbone") 
+    # ================================= Report setting =====================================   
+    parser.add_argument("--freeze_backbone", help="freeze_backbone", default=False)
+    parser.add_argument("--load_pretrain", help="load_pretrain", default=True)
+    
+    parser.add_argument("--pretrain_path", help="Checkpoint", default= "./ckpt4_2_naive_backbone/improved-net.pt") 
     parser.add_argument("--ckpt_path", help="Checkpoint", default= "./ckpt4_2_downstream") 
     
-    
+    # ================================= TRAIN ===================================== 
     parser.add_argument("--data_path", help="data_path", default= "./hw4_data/office/") 
-    parser.add_argument("--batch_size", help="batch size", type=int, default=16)
+    parser.add_argument("--batch_size", help="batch size", type=int, default=8)
     parser.add_argument("--learning_rate", help="learning rate", type=float, default=3e-4)
     # parser.add_argument("--weight_decay", help="weight decay", type=float, default=1e-9)
     parser.add_argument("--n_epochs", help="n_epochs", type=int, default=100) 
-    # ================================= TRAIN =====================================   
+      
     parser.add_argument("--stepLR_step", help="learning rate decay factor.",type=int, default=100)
     parser.add_argument("--stepLR_gamma", help="learning rate decay factor.",type=float, default=0.99)
                      
@@ -123,6 +127,7 @@ if __name__ == "__main__":
             device = torch.device("cuda")
     else:
         device = torch.device("cpu")
+    # device = torch.device("cuda")
     print("Using", device)
     # args
     batch_size = args.batch_size
@@ -133,7 +138,9 @@ if __name__ == "__main__":
     stepLR_step = args.stepLR_step 
     stepLR_gamma = args.stepLR_gamma
 
+    load_pretrain = args.load_pretrain
     pretrain_path = args.pretrain_path
+    freeze_backbone = args.freeze_backbone
     ckpt_path = args.ckpt_path
     os.makedirs(ckpt_path, exist_ok=True)
     data_path = args.data_path
@@ -171,11 +178,19 @@ if __name__ == "__main__":
     model = DownStreamResnet(n_class=65, is_pretrain=False)
 
     # load pretrain
-    resume = os.path.join(pretrain_path, "improved-net.pt")
-    print(f"Load from {resume}")
-    checkpoint = torch.load(resume, map_location = device)
-    model.resnet.load_state_dict(checkpoint)
-
+    if load_pretrain == True:
+        print(f"Load from {pretrain_path}")
+        checkpoint = torch.load(pretrain_path, map_location = device)
+        model.resnet.load_state_dict(checkpoint)
+    else: 
+        print("No pretrain resnet.")
+    
+    if freeze_backbone == True:
+        print(f"Freeze Backbone")
+        for param in model.resnet.parameters():
+            param.requires_grad = False
+    else:
+        print("No freeze backbone.")  
 
     # to device
     # print(model)
@@ -198,7 +213,6 @@ if __name__ == "__main__":
 
     
     loss_curve_train = []
-    step = 0
     loss_curve_val = []
     loss_best = 100
     criterion = nn.CrossEntropyLoss()
@@ -208,6 +222,7 @@ if __name__ == "__main__":
         print("Train")
         pbar = tqdm(train_dataloader)
         pbar.set_description(f"Epoch {epoch}|{n_epochs}")
+        loss_epoch_train = []
         for data in pbar:
             img, label = data    
             img = img.to(device)
@@ -228,17 +243,18 @@ if __name__ == "__main__":
             scheduler.step()
 
             # learner.update_moving_average()
+            loss_epoch_train.append(loss.item())
             pbar.set_postfix(loss=loss.item(), lr = optimizer.param_groups[0]['lr'])
-            loss_curve_train.append(loss.item())
-            step+=1
 
+        loss_train = sum(loss_epoch_train)/len(loss_epoch_train)
+        loss_curve_train.append(loss_train)
+        print(f"Epoch {epoch} Train loss: {loss_train:.3f}")
         # ========================= Eval ==========================
         model.eval()
         print("Eval")
         pbar_val = tqdm(val_dataloader)
         pbar_val.set_description(f"Epoch {epoch}|{n_epochs}")
-        loss_val_epoch = []
-
+        loss_epoch_val = []
         count=0
         total=0
         for data in pbar_val:
@@ -249,9 +265,7 @@ if __name__ == "__main__":
             label = label.to(device)
             logits = model(img)
             pred = torch.argmax(logits, dim=1).detach().cpu().numpy()
-            if epoch>5:
-                print(pred)
-                print(label)
+
             for p,l in zip(pred, label):
                 if p==l:
                     count+=1
@@ -261,12 +275,12 @@ if __name__ == "__main__":
 
             # learner.update_moving_average()
             pbar.set_postfix(loss=loss.item(), lr = optimizer.param_groups[0]['lr'])
-            loss_curve_val.append(loss.item())
-            step+=1
-            loss_val_epoch.append(loss.item())
+            loss_epoch_val.append(loss.item())
 
         # Save model
-        loss_val = sum(loss_val_epoch)/len(loss_val_epoch)
+        loss_val = sum(loss_epoch_val)/len(loss_epoch_val)
+        loss_curve_val.append(loss_val)
+        
         print(f"Epoch {epoch} Eval loss: {loss_val:.3f}, Acc: {count/total}")
         if loss_best > loss_val:
             print("Save model")
@@ -279,13 +293,18 @@ if __name__ == "__main__":
                     'scheduler_state_dict': scheduler.state_dict(),
                     }, save_as)
     
-    # plot loss 
-    # x = list(range(0, len(loss_curve_train)))
-    # plt.plot(x, loss_curve_train)
-    # plt.xlabel('step')
-    # plt.ylabel('loss')
-    # plt.title("Train 4-2 backbone loss curve")
-    # plt.savefig("./Train_loss_4_2.png")
+    # # plot loss --n_epochs
+    x = list(range(0, n_epochs))
+    plt.plot(x, loss_curve_train, label='Train loss', marker = 'o')
+    plt.plot(x, loss_curve_val, label='Valid loss', marker = 'o')
+    plt.legend()
+    plt.xlabel('epoch')
+    plt.ylabel('loss')
+    plt.title("Train 4-2 backbone loss curve")
+    save_img_as = os.path.join(ckpt_path,"loss.png")
+    plt.savefig(save_img_as)
+
+    print(f"Loss curve is saved at {save_img_as}")
 
 
 

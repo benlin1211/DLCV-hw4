@@ -103,6 +103,8 @@ if __name__ == "__main__":
     parser.add_argument("--freeze_backbone", help="freeze_backbone", default=False)
     parser.add_argument("--load_pretrain", help="load_pretrain", default=True)
     
+    parser.add_argument("--setting_type", help="setting_type", default="C")
+    
     parser.add_argument("--pretrain_path", help="Checkpoint", default= "./ckpt4_2_naive_backbone/improved-net.pt") 
     parser.add_argument("--ckpt_path", help="Checkpoint", default= "./ckpt4_2_downstream") 
     
@@ -142,6 +144,7 @@ if __name__ == "__main__":
     pretrain_path = args.pretrain_path
     freeze_backbone = args.freeze_backbone
     ckpt_path = args.ckpt_path
+    setting_type = args.setting_type
     os.makedirs(ckpt_path, exist_ok=True)
     data_path = args.data_path
 
@@ -300,7 +303,7 @@ if __name__ == "__main__":
     plt.legend()
     plt.xlabel('epoch')
     plt.ylabel('loss')
-    plt.title("Train 4-2 backbone loss curve")
+    plt.title(f"P2 Loss curve - setting {setting_type}")
     save_img_as = os.path.join(ckpt_path,"loss.png")
     plt.savefig(save_img_as)
 

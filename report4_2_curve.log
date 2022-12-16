@@ -1,0 +1,9 @@
+{'freeze_backbone': False, 'load_pretrain': 'False', 'setting_type': 'A', 'pretrain_path': '', 'ckpt_path': 'ckpt4_2A', 'data_path': './hw4_data/office/', 'batch_size': 8, 'learning_rate': 0.0003, 'n_epochs': 100, 'stepLR_step': 100, 'stepLR_gamma': 0.99}
+Using cuda:1
+1
+Train: 494
+Val: 51
+No pretrain resnet.
+No freeze backbone.
+Number of params: 25622097
+Train

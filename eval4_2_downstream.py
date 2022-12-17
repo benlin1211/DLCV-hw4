@@ -52,20 +52,12 @@ def read_csv_with_index(path):
 
 
 class Mini(Dataset):
-    def __init__(self, data_path, transform, label2id, mode='test'):
+    def __init__(self, data_path, filenames, transform, label2id):
         super().__init__()
         self.transform = transform
-        self.data_path = data_path
-        self.mode = mode
-        # print("data_path", data_path)
-        if self.mode == "train" or self.mode == "val": 
-            path = os.path.join(self.data_path, f"{self.mode}.csv")
-            self.labels, image_names = read_csv_with_index(path)
-            self.image_paths = [os.path.join(data_path, self.mode, n) for n in image_names]
-        else: # test
-            self.image_paths = sorted(glob.glob(os.path.join(self.data_path, "*.jpg")))
-            print(len(self.image_paths))
-            print(self.image_paths[0:10])
+        self.image_paths = [os.path.join(data_path, f) for f in filenames]
+        # sorted(glob.glob(os.path.join(data_path, "*.jpg")))
+
         self.label2id = label2id
     
     def __len__(self):
@@ -74,12 +66,7 @@ class Mini(Dataset):
     def __getitem__(self, idx):
         img = Image.open(self.image_paths[idx])
         img = self.transform(img)
-        if self.mode == "train" or self.mode == "val": 
-            label = self.labels[idx]
-
-            return img, int(label2id[label])
-        else: # test 
-            return img
+        return img
 
 def show_n_param(model):
     n_parameters = sum(p.numel()
@@ -102,11 +89,9 @@ class DownStreamResnet(nn.Module):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="hw 4-2 train",
                                     formatter_class=argparse.ArgumentDefaultsHelpFormatter)
-    parser.add_argument("--resume_path", help="Checkpoint", default= "./ckpt4_2_downstream/downstring_SGD.pth") 
-    
-    
-    parser.add_argument("--data_path", help="data_path", default= "./hw4_data/office/val") 
+    parser.add_argument("--resume_path", help="Checkpoint", default= "./ckpt4_2C/downstring_SGD.pth") 
     parser.add_argument("--csv_path", help="csv_path", default= "./hw4_data/office/val.csv") 
+    parser.add_argument("--data_path", help="data_path", default= "./hw4_data/office/val") 
     parser.add_argument("--output_name", help="output_name", default= "./output_p2/test_pred.csv") 
     parser.add_argument("--batch_size", help="batch size", type=int, default=32)
 
@@ -145,8 +130,7 @@ if __name__ == "__main__":
             else:
                 filenames.append(filename)
 
-    filenames = sorted(filenames)
-    print(filenames[0:10])
+    # filenames = sorted(filenames)
     print(len(filenames))
 
     # Transform 
@@ -175,7 +159,7 @@ if __name__ == "__main__":
     # print(id2label[1])
     
     # Dataset
-    val_dataset = Mini(data_path, tfm, label2id, mode='test')
+    val_dataset = Mini(data_path, filenames, tfm, label2id)
     val_dataloader = DataLoader(val_dataset, batch_size, shuffle=False, num_workers=8)
 
     print("Val:", len(val_dataloader))

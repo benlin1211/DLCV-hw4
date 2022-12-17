@@ -7,3 +7,2189 @@ No pretrain resnet.
 No freeze backbone.
 Number of params: 25622097
 Train
+Epoch 0 Train loss: 4.180
+Eval
+Epoch 0 Eval loss: 4.308, Acc: 0.017241379310344827
+Save model
+Train
+Epoch 1 Train loss: 4.130
+Eval
+Epoch 1 Eval loss: 4.276, Acc: 0.054187192118226604
+Save model
+Train
+Epoch 2 Train loss: 4.101
+Eval
+Epoch 2 Eval loss: 4.187, Acc: 0.05172413793103448
+Save model
+Train
+Epoch 3 Train loss: 4.078
+Eval
+Epoch 3 Eval loss: 4.092, Acc: 0.054187192118226604
+Save model
+Train
+Epoch 4 Train loss: 4.057
+Eval
+Epoch 4 Eval loss: 4.143, Acc: 0.05665024630541872
+Train
+Epoch 5 Train loss: 4.037
+Eval
+Epoch 5 Eval loss: 4.059, Acc: 0.04926108374384237
+Save model
+Train
+Epoch 6 Train loss: 4.008
+Eval
+Epoch 6 Eval loss: 4.005, Acc: 0.06157635467980296
+Save model
+Train
+Epoch 7 Train loss: 3.981
+Eval
+Epoch 7 Eval loss: 3.999, Acc: 0.07389162561576355
+Save model
+Train
+Epoch 8 Train loss: 3.957
+Eval
+Epoch 8 Eval loss: 3.951, Acc: 0.0812807881773399
+Save model
+Train
+Epoch 9 Train loss: 3.928
+Eval
+Epoch 9 Eval loss: 3.948, Acc: 0.07881773399014778
+Save model
+Train
+Epoch 10 Train loss: 3.918
+Eval
+Epoch 10 Eval loss: 3.895, Acc: 0.07142857142857142
+Save model
+Train
+Epoch 11 Train loss: 3.875
+Eval
+Epoch 11 Eval loss: 3.909, Acc: 0.0812807881773399
+Train
+Epoch 12 Train loss: 3.855
+Eval
+Epoch 12 Eval loss: 3.881, Acc: 0.09113300492610837
+Save model
+Train
+Epoch 13 Train loss: 3.837
+Eval
+Epoch 13 Eval loss: 3.863, Acc: 0.08620689655172414
+Save model
+Train
+Epoch 14 Train loss: 3.809
+Eval
+Epoch 14 Eval loss: 3.813, Acc: 0.09852216748768473
+Save model
+Train
+Epoch 15 Train loss: 3.781
+Eval
+Epoch 15 Eval loss: 3.815, Acc: 0.09113300492610837
+Train
+Epoch 16 Train loss: 3.768
+Eval
+Epoch 16 Eval loss: 3.795, Acc: 0.10344827586206896
+Save model
+Train
+Epoch 17 Train loss: 3.747
+Eval
+Epoch 17 Eval loss: 3.776, Acc: 0.10344827586206896
+Save model
+Train
+Epoch 18 Train loss: 3.721
+Eval
+Epoch 18 Eval loss: 3.745, Acc: 0.08866995073891626
+Save model
+Train
+Epoch 19 Train loss: 3.700
+Eval
+Epoch 19 Eval loss: 3.738, Acc: 0.09852216748768473
+Save model
+Train
+Epoch 20 Train loss: 3.688
+Eval
+Epoch 20 Eval loss: 3.766, Acc: 0.10837438423645321
+Train
+Epoch 21 Train loss: 3.669
+Eval
+Epoch 21 Eval loss: 3.720, Acc: 0.10591133004926108
+Save model
+Train
+Epoch 22 Train loss: 3.643
+Eval
+Epoch 22 Eval loss: 3.695, Acc: 0.11576354679802955
+Save model
+Train
+Epoch 23 Train loss: 3.627
+Eval
+Epoch 23 Eval loss: 3.723, Acc: 0.10837438423645321
+Train
+Epoch 24 Train loss: 3.604
+Eval
+Epoch 24 Eval loss: 3.703, Acc: 0.11330049261083744
+Train
+Epoch 25 Train loss: 3.581
+Eval
+Epoch 25 Eval loss: 3.695, Acc: 0.11330049261083744
+Train
+Epoch 26 Train loss: 3.565
+Eval
+Epoch 26 Eval loss: 3.704, Acc: 0.11083743842364532
+Train
+Epoch 27 Train loss: 3.550
+Eval
+Epoch 27 Eval loss: 3.700, Acc: 0.11576354679802955
+Train
+Epoch 28 Train loss: 3.509
+Eval
+Epoch 28 Eval loss: 3.673, Acc: 0.1206896551724138
+Save model
+Train
+Epoch 29 Train loss: 3.509
+Eval
+Epoch 29 Eval loss: 3.679, Acc: 0.10591133004926108
+Train
+Epoch 30 Train loss: 3.474
+Eval
+Epoch 30 Eval loss: 3.657, Acc: 0.11330049261083744
+Save model
+Train
+Epoch 31 Train loss: 3.458
+Eval
+Epoch 31 Eval loss: 3.642, Acc: 0.11822660098522167
+Save model
+Train
+Epoch 32 Train loss: 3.443
+Eval
+Epoch 32 Eval loss: 3.626, Acc: 0.1330049261083744
+Save model
+Train
+Epoch 33 Train loss: 3.425
+Eval
+Epoch 33 Eval loss: 3.641, Acc: 0.1330049261083744
+Train
+Epoch 34 Train loss: 3.407
+Eval
+Epoch 34 Eval loss: 3.619, Acc: 0.13054187192118227
+Save model
+Train
+Epoch 35 Train loss: 3.384
+Eval
+Epoch 35 Eval loss: 3.630, Acc: 0.12561576354679804
+Train
+Epoch 36 Train loss: 3.360
+Eval
+Epoch 36 Eval loss: 3.629, Acc: 0.14532019704433496
+Train
+Epoch 37 Train loss: 3.341
+Eval
+Epoch 37 Eval loss: 3.604, Acc: 0.14039408866995073
+Save model
+Train
+Epoch 38 Train loss: 3.305
+Eval
+Epoch 38 Eval loss: 3.578, Acc: 0.13054187192118227
+Save model
+Train
+Epoch 39 Train loss: 3.295
+Eval
+Epoch 39 Eval loss: 3.585, Acc: 0.1477832512315271
+Train
+Epoch 40 Train loss: 3.270
+Eval
+Epoch 40 Eval loss: 3.563, Acc: 0.14532019704433496
+Save model
+Train
+Epoch 41 Train loss: 3.238
+Eval
+Epoch 41 Eval loss: 3.546, Acc: 0.14532019704433496
+Save model
+Train
+Epoch 42 Train loss: 3.222
+Eval
+Epoch 42 Eval loss: 3.549, Acc: 0.15270935960591134
+Train
+Epoch 43 Train loss: 3.203
+Eval
+Epoch 43 Eval loss: 3.583, Acc: 0.1477832512315271
+Train
+Epoch 44 Train loss: 3.185
+Eval
+Epoch 44 Eval loss: 3.548, Acc: 0.14285714285714285
+Train
+Epoch 45 Train loss: 3.159
+Eval
+Epoch 45 Eval loss: 3.534, Acc: 0.15517241379310345
+Save model
+Train
+Epoch 46 Train loss: 3.126
+Eval
+Epoch 46 Eval loss: 3.587, Acc: 0.1477832512315271
+Train
+Epoch 47 Train loss: 3.094
+Eval
+Epoch 47 Eval loss: 3.534, Acc: 0.15024630541871922
+Train
+Epoch 48 Train loss: 3.089
+Eval
+Epoch 48 Eval loss: 3.524, Acc: 0.15517241379310345
+Save model
+Train
+Epoch 49 Train loss: 3.043
+Eval
+Epoch 49 Eval loss: 3.507, Acc: 0.16748768472906403
+Save model
+Train
+Epoch 50 Train loss: 3.021
+Eval
+Epoch 50 Eval loss: 3.513, Acc: 0.16995073891625614
+Train
+Epoch 51 Train loss: 2.992
+Eval
+Epoch 51 Eval loss: 3.517, Acc: 0.15763546798029557
+Train
+Epoch 52 Train loss: 2.978
+Eval
+Epoch 52 Eval loss: 3.558, Acc: 0.15517241379310345
+Train
+Epoch 53 Train loss: 2.939
+Eval
+Epoch 53 Eval loss: 3.509, Acc: 0.16009852216748768
+Train
+Epoch 54 Train loss: 2.920
+Eval
+Epoch 54 Eval loss: 3.478, Acc: 0.1625615763546798
+Save model
+Train
+Epoch 55 Train loss: 2.881
+Eval
+Epoch 55 Eval loss: 3.496, Acc: 0.1625615763546798
+Train
+Epoch 56 Train loss: 2.864
+Eval
+Epoch 56 Eval loss: 3.497, Acc: 0.1625615763546798
+Train
+Epoch 57 Train loss: 2.853
+Eval
+Epoch 57 Eval loss: 3.503, Acc: 0.16009852216748768
+Train
+Epoch 58 Train loss: 2.802
+Eval
+Epoch 58 Eval loss: 3.517, Acc: 0.16995073891625614
+Train
+Epoch 59 Train loss: 2.791
+Eval
+Epoch 59 Eval loss: 3.532, Acc: 0.1724137931034483
+Train
+Epoch 60 Train loss: 2.774
+Eval
+Epoch 60 Eval loss: 3.498, Acc: 0.16502463054187191
+Train
+Epoch 61 Train loss: 2.737
+Eval
+Epoch 61 Eval loss: 3.544, Acc: 0.1477832512315271
+Train
+Epoch 62 Train loss: 2.719
+Eval
+Epoch 62 Eval loss: 3.548, Acc: 0.17733990147783252
+Train
+Epoch 63 Train loss: 2.666
+Eval
+Epoch 63 Eval loss: 3.525, Acc: 0.1477832512315271
+Train
+Epoch 64 Train loss: 2.660
+Eval
+Epoch 64 Eval loss: 3.498, Acc: 0.1625615763546798
+Train
+Epoch 65 Train loss: 2.629
+Eval
+Epoch 65 Eval loss: 3.510, Acc: 0.1625615763546798
+Train
+Epoch 66 Train loss: 2.606
+Eval
+Epoch 66 Eval loss: 3.549, Acc: 0.15763546798029557
+Train
+Epoch 67 Train loss: 2.565
+Eval
+Epoch 67 Eval loss: 3.575, Acc: 0.18226600985221675
+Train
+Epoch 68 Train loss: 2.560
+Eval
+Epoch 68 Eval loss: 3.579, Acc: 0.16748768472906403
+Train
+Epoch 69 Train loss: 2.528
+Eval
+Epoch 69 Eval loss: 3.547, Acc: 0.16502463054187191
+Train
+Epoch 70 Train loss: 2.476
+Eval
+Epoch 70 Eval loss: 3.496, Acc: 0.1724137931034483
+Train
+Epoch 71 Train loss: 2.489
+Eval
+Epoch 71 Eval loss: 3.529, Acc: 0.1625615763546798
+Train
+Epoch 72 Train loss: 2.445
+Eval
+Epoch 72 Eval loss: 3.564, Acc: 0.15763546798029557
+Train
+Epoch 73 Train loss: 2.422
+Eval
+Epoch 73 Eval loss: 3.629, Acc: 0.18472906403940886
+Train
+Epoch 74 Train loss: 2.413
+Eval
+Epoch 74 Eval loss: 3.606, Acc: 0.17733990147783252
+Train
+Epoch 75 Train loss: 2.401
+Eval
+Epoch 75 Eval loss: 3.533, Acc: 0.1896551724137931
+Train
+Epoch 76 Train loss: 2.364
+Eval
+Epoch 76 Eval loss: 3.530, Acc: 0.1748768472906404
+Train
+Epoch 77 Train loss: 2.310
+Eval
+Epoch 77 Eval loss: 3.565, Acc: 0.18226600985221675
+Train
+Epoch 78 Train loss: 2.301
+Eval
+Epoch 78 Eval loss: 3.594, Acc: 0.17733990147783252
+Train
+Epoch 79 Train loss: 2.288
+Eval
+Epoch 79 Eval loss: 3.593, Acc: 0.15517241379310345
+Train
+Epoch 80 Train loss: 2.257
+Eval
+Epoch 80 Eval loss: 3.685, Acc: 0.18719211822660098
+Train
+Epoch 81 Train loss: 2.279
+Eval
+Epoch 81 Eval loss: 3.699, Acc: 0.18226600985221675
+Train
+Epoch 82 Train loss: 2.254
+Eval
+Epoch 82 Eval loss: 3.600, Acc: 0.18226600985221675
+Train
+Epoch 83 Train loss: 2.191
+Eval
+Epoch 83 Eval loss: 3.682, Acc: 0.1724137931034483
+Train
+Epoch 84 Train loss: 2.165
+Eval
+Epoch 84 Eval loss: 3.609, Acc: 0.1724137931034483
+Train
+Epoch 85 Train loss: 2.168
+Eval
+Epoch 85 Eval loss: 3.733, Acc: 0.1724137931034483
+Train
+Epoch 86 Train loss: 2.124
+Eval
+Epoch 86 Eval loss: 3.701, Acc: 0.18226600985221675
+Train
+Epoch 87 Train loss: 2.128
+Eval
+Epoch 87 Eval loss: 3.685, Acc: 0.1724137931034483
+Train
+Epoch 88 Train loss: 2.082
+Eval
+Epoch 88 Eval loss: 3.715, Acc: 0.16009852216748768
+Train
+Epoch 89 Train loss: 2.069
+Eval
+Epoch 89 Eval loss: 3.694, Acc: 0.17733990147783252
+Train
+Epoch 90 Train loss: 2.092
+Eval
+Epoch 90 Eval loss: 3.762, Acc: 0.17733990147783252
+Train
+Epoch 91 Train loss: 2.050
+Eval
+Epoch 91 Eval loss: 3.712, Acc: 0.17980295566502463
+Train
+Epoch 92 Train loss: 2.033
+Eval
+Epoch 92 Eval loss: 3.682, Acc: 0.16502463054187191
+Train
+Epoch 93 Train loss: 1.994
+Eval
+Epoch 93 Eval loss: 3.724, Acc: 0.1724137931034483
+Train
+Epoch 94 Train loss: 2.017
+Eval
+Epoch 94 Eval loss: 3.789, Acc: 0.17980295566502463
+Train
+Epoch 95 Train loss: 1.968
+Eval
+Epoch 95 Eval loss: 3.720, Acc: 0.18226600985221675
+Train
+Epoch 96 Train loss: 1.958
+Eval
+Epoch 96 Eval loss: 3.728, Acc: 0.16995073891625614
+Train
+Epoch 97 Train loss: 1.969
+Eval
+Epoch 97 Eval loss: 3.745, Acc: 0.1724137931034483
+Train
+Epoch 98 Train loss: 1.958
+Eval
+Epoch 98 Eval loss: 3.771, Acc: 0.1921182266009852
+Train
+Epoch 99 Train loss: 1.892
+Eval
+Epoch 99 Eval loss: 3.856, Acc: 0.16995073891625614
+Loss curve is saved at ckpt4_2A/loss.png
+{'freeze_backbone': False, 'load_pretrain': True, 'setting_type': 'B', 'pretrain_path': './hw4_data/pretrain_model_SL.pt', 'ckpt_path': 'ckpt4_2B', 'data_path': './hw4_data/office/', 'batch_size': 16, 'learning_rate': 0.0003, 'n_epochs': 100, 'stepLR_step': 100, 'stepLR_gamma': 0.99}
+Using cuda:1
+1
+Train: 247
+Val: 26
+Load from ./hw4_data/pretrain_model_SL.pt
+No freeze backbone.
+Number of params: 25622097
+Train
+Epoch 0 Train loss: 4.052
+Eval
+Epoch 0 Eval loss: 3.942, Acc: 0.11822660098522167
+Save model
+Train
+Epoch 1 Train loss: 3.685
+Eval
+Epoch 1 Eval loss: 3.858, Acc: 0.14532019704433496
+Save model
+Train
+Epoch 2 Train loss: 3.472
+Eval
+Epoch 2 Eval loss: 3.827, Acc: 0.15763546798029557
+Save model
+Train
+Epoch 3 Train loss: 3.295
+Eval
+Epoch 3 Eval loss: 3.707, Acc: 0.1748768472906404
+Save model
+Train
+Epoch 4 Train loss: 3.190
+Eval
+Epoch 4 Eval loss: 3.872, Acc: 0.1921182266009852
+Train
+Epoch 5 Train loss: 3.105
+Eval
+Epoch 5 Eval loss: 3.735, Acc: 0.2044334975369458
+Train
+Epoch 6 Train loss: 3.014
+Eval
+Epoch 6 Eval loss: 3.409, Acc: 0.2019704433497537
+Save model
+Train
+Epoch 7 Train loss: 2.928
+Eval
+Epoch 7 Eval loss: 3.258, Acc: 0.2315270935960591
+Save model
+Train
+Epoch 8 Train loss: 2.866
+Eval
+Epoch 8 Eval loss: 3.300, Acc: 0.21674876847290642
+Train
+Epoch 9 Train loss: 2.801
+Eval
+Epoch 9 Eval loss: 3.163, Acc: 0.22413793103448276
+Save model
+Train
+Epoch 10 Train loss: 2.724
+Eval
+Epoch 10 Eval loss: 3.222, Acc: 0.2315270935960591
+Train
+Epoch 11 Train loss: 2.671
+Eval
+Epoch 11 Eval loss: 3.190, Acc: 0.21428571428571427
+Train
+Epoch 12 Train loss: 2.617
+Eval
+Epoch 12 Eval loss: 3.093, Acc: 0.20935960591133004
+Save model
+Train
+Epoch 13 Train loss: 2.568
+Eval
+Epoch 13 Eval loss: 3.139, Acc: 0.229064039408867
+Train
+Epoch 14 Train loss: 2.519
+Eval
+Epoch 14 Eval loss: 3.093, Acc: 0.21674876847290642
+Save model
+Train
+Epoch 15 Train loss: 2.491
+Eval
+Epoch 15 Eval loss: 3.136, Acc: 0.21428571428571427
+Train
+Epoch 16 Train loss: 2.440
+Eval
+Epoch 16 Eval loss: 3.126, Acc: 0.22413793103448276
+Train
+Epoch 17 Train loss: 2.399
+Eval
+Epoch 17 Eval loss: 3.087, Acc: 0.22413793103448276
+Save model
+Train
+Epoch 18 Train loss: 2.359
+Eval
+Epoch 18 Eval loss: 3.073, Acc: 0.229064039408867
+Save model
+Train
+Epoch 19 Train loss: 2.311
+Eval
+Epoch 19 Eval loss: 3.138, Acc: 0.21921182266009853
+Train
+Epoch 20 Train loss: 2.283
+Eval
+Epoch 20 Eval loss: 3.112, Acc: 0.2315270935960591
+Train
+Epoch 21 Train loss: 2.252
+Eval
+Epoch 21 Eval loss: 3.115, Acc: 0.22660098522167488
+Train
+Epoch 22 Train loss: 2.199
+Eval
+Epoch 22 Eval loss: 3.199, Acc: 0.229064039408867
+Train
+Epoch 23 Train loss: 2.181
+Eval
+Epoch 23 Eval loss: 3.198, Acc: 0.22167487684729065
+Train
+Epoch 24 Train loss: 2.147
+Eval
+Epoch 24 Eval loss: 3.247, Acc: 0.22413793103448276
+Train
+Epoch 25 Train loss: 2.101
+Eval
+Epoch 25 Eval loss: 3.237, Acc: 0.22167487684729065
+Train
+Epoch 26 Train loss: 2.067
+Eval
+Epoch 26 Eval loss: 3.257, Acc: 0.21428571428571427
+Train
+Epoch 27 Train loss: 2.046
+Eval
+Epoch 27 Eval loss: 3.208, Acc: 0.23645320197044334
+Train
+Epoch 28 Train loss: 2.000
+Eval
+Epoch 28 Eval loss: 3.173, Acc: 0.22167487684729065
+Train
+Epoch 29 Train loss: 1.973
+Eval
+Epoch 29 Eval loss: 3.228, Acc: 0.21674876847290642
+Train
+Epoch 30 Train loss: 1.945
+Eval
+Epoch 30 Eval loss: 3.201, Acc: 0.229064039408867
+Train
+Epoch 31 Train loss: 1.886
+Eval
+Epoch 31 Eval loss: 3.226, Acc: 0.23399014778325122
+Train
+Epoch 32 Train loss: 1.875
+Eval
+Epoch 32 Eval loss: 3.323, Acc: 0.23399014778325122
+Train
+Epoch 33 Train loss: 1.856
+Eval
+Epoch 33 Eval loss: 3.282, Acc: 0.23399014778325122
+Train
+Epoch 34 Train loss: 1.815
+Eval
+Epoch 34 Eval loss: 3.277, Acc: 0.2315270935960591
+Train
+Epoch 35 Train loss: 1.769
+Eval
+Epoch 35 Eval loss: 3.353, Acc: 0.21921182266009853
+Train
+Epoch 36 Train loss: 1.765
+Eval
+Epoch 36 Eval loss: 3.350, Acc: 0.23399014778325122
+Train
+Epoch 37 Train loss: 1.710
+Eval
+Epoch 37 Eval loss: 3.395, Acc: 0.23645320197044334
+Train
+Epoch 38 Train loss: 1.707
+Eval
+Epoch 38 Eval loss: 3.416, Acc: 0.2315270935960591
+Train
+Epoch 39 Train loss: 1.705
+Eval
+Epoch 39 Eval loss: 3.477, Acc: 0.22660098522167488
+Train
+Epoch 40 Train loss: 1.648
+Eval
+Epoch 40 Eval loss: 3.484, Acc: 0.22413793103448276
+Train
+Epoch 41 Train loss: 1.626
+Eval
+Epoch 41 Eval loss: 3.413, Acc: 0.22660098522167488
+Train
+Epoch 42 Train loss: 1.613
+Eval
+Epoch 42 Eval loss: 3.463, Acc: 0.23645320197044334
+Train
+Epoch 43 Train loss: 1.582
+Eval
+Epoch 43 Eval loss: 3.422, Acc: 0.22413793103448276
+Train
+Epoch 44 Train loss: 1.540
+Eval
+Epoch 44 Eval loss: 3.614, Acc: 0.23399014778325122
+Train
+Epoch 45 Train loss: 1.542
+Eval
+Epoch 45 Eval loss: 3.584, Acc: 0.23399014778325122
+Train
+Epoch 46 Train loss: 1.485
+Eval
+Epoch 46 Eval loss: 3.518, Acc: 0.23891625615763548
+Train
+Epoch 47 Train loss: 1.479
+Eval
+Epoch 47 Eval loss: 3.579, Acc: 0.24630541871921183
+Train
+Epoch 48 Train loss: 1.454
+Eval
+Epoch 48 Eval loss: 3.593, Acc: 0.23891625615763548
+Train
+Epoch 49 Train loss: 1.449
+Eval
+Epoch 49 Eval loss: 3.614, Acc: 0.23891625615763548
+Train
+Epoch 50 Train loss: 1.405
+Eval
+Epoch 50 Eval loss: 3.671, Acc: 0.23645320197044334
+Train
+Epoch 51 Train loss: 1.397
+Eval
+Epoch 51 Eval loss: 3.747, Acc: 0.23891625615763548
+Train
+Epoch 52 Train loss: 1.382
+Eval
+Epoch 52 Eval loss: 3.671, Acc: 0.23891625615763548
+Train
+Epoch 53 Train loss: 1.339
+Eval
+Epoch 53 Eval loss: 3.738, Acc: 0.2315270935960591
+Train
+Epoch 54 Train loss: 1.330
+Eval
+Epoch 54 Eval loss: 3.774, Acc: 0.23645320197044334
+Train
+Epoch 55 Train loss: 1.312
+Eval
+Epoch 55 Eval loss: 3.671, Acc: 0.23645320197044334
+Train
+Epoch 56 Train loss: 1.297
+Eval
+Epoch 56 Eval loss: 3.812, Acc: 0.229064039408867
+Train
+Epoch 57 Train loss: 1.282
+Eval
+Epoch 57 Eval loss: 3.880, Acc: 0.23891625615763548
+Train
+Epoch 58 Train loss: 1.287
+Eval
+Epoch 58 Eval loss: 3.864, Acc: 0.23891625615763548
+Train
+Epoch 59 Train loss: 1.258
+Eval
+Epoch 59 Eval loss: 3.789, Acc: 0.2536945812807882
+Train
+Epoch 60 Train loss: 1.241
+Eval
+Epoch 60 Eval loss: 3.857, Acc: 0.2536945812807882
+Train
+Epoch 61 Train loss: 1.230
+Eval
+Epoch 61 Eval loss: 3.725, Acc: 0.24630541871921183
+Train
+Epoch 62 Train loss: 1.204
+Eval
+Epoch 62 Eval loss: 3.929, Acc: 0.2315270935960591
+Train
+Epoch 63 Train loss: 1.172
+Eval
+Epoch 63 Eval loss: 4.026, Acc: 0.23891625615763548
+Train
+Epoch 64 Train loss: 1.172
+Eval
+Epoch 64 Eval loss: 3.932, Acc: 0.24876847290640394
+Train
+Epoch 65 Train loss: 1.155
+Eval
+Epoch 65 Eval loss: 3.985, Acc: 0.23645320197044334
+Train
+Epoch 66 Train loss: 1.132
+Eval
+Epoch 66 Eval loss: 3.894, Acc: 0.2512315270935961
+Train
+Epoch 67 Train loss: 1.119
+Eval
+Epoch 67 Eval loss: 3.924, Acc: 0.23645320197044334
+Train
+Epoch 68 Train loss: 1.095
+Eval
+Epoch 68 Eval loss: 4.070, Acc: 0.23399014778325122
+Train
+Epoch 69 Train loss: 1.089
+Eval
+Epoch 69 Eval loss: 4.028, Acc: 0.2438423645320197
+Train
+Epoch 70 Train loss: 1.069
+Eval
+Epoch 70 Eval loss: 3.943, Acc: 0.24630541871921183
+Train
+Epoch 71 Train loss: 1.066
+Eval
+Epoch 71 Eval loss: 3.956, Acc: 0.23891625615763548
+Train
+Epoch 72 Train loss: 1.044
+Eval
+Epoch 72 Eval loss: 4.045, Acc: 0.2438423645320197
+Train
+Epoch 73 Train loss: 1.033
+Eval
+Epoch 73 Eval loss: 4.013, Acc: 0.24630541871921183
+Train
+Epoch 74 Train loss: 1.057
+Eval
+Epoch 74 Eval loss: 4.051, Acc: 0.2561576354679803
+Train
+Epoch 75 Train loss: 1.045
+Eval
+Epoch 75 Eval loss: 4.031, Acc: 0.24876847290640394
+Train
+Epoch 76 Train loss: 1.008
+Eval
+Epoch 76 Eval loss: 4.079, Acc: 0.2512315270935961
+Train
+Epoch 77 Train loss: 1.013
+Eval
+Epoch 77 Eval loss: 4.090, Acc: 0.24630541871921183
+Train
+Epoch 78 Train loss: 0.986
+Eval
+Epoch 78 Eval loss: 4.136, Acc: 0.2438423645320197
+Train
+Epoch 79 Train loss: 0.972
+Eval
+Epoch 79 Eval loss: 4.154, Acc: 0.2413793103448276
+Train
+Epoch 80 Train loss: 0.961
+Eval
+Epoch 80 Eval loss: 4.046, Acc: 0.2315270935960591
+Train
+Epoch 81 Train loss: 0.974
+Eval
+Epoch 81 Eval loss: 4.096, Acc: 0.24630541871921183
+Train
+Epoch 82 Train loss: 0.968
+Eval
+Epoch 82 Eval loss: 4.166, Acc: 0.24876847290640394
+Train
+Epoch 83 Train loss: 0.933
+Eval
+Epoch 83 Eval loss: 4.187, Acc: 0.24630541871921183
+Train
+Epoch 84 Train loss: 0.911
+Eval
+Epoch 84 Eval loss: 4.080, Acc: 0.23399014778325122
+Train
+Epoch 85 Train loss: 0.934
+Eval
+Epoch 85 Eval loss: 4.206, Acc: 0.2438423645320197
+Train
+Epoch 86 Train loss: 0.906
+Eval
+Epoch 86 Eval loss: 4.253, Acc: 0.25862068965517243
+Train
+Epoch 87 Train loss: 0.905
+Eval
+Epoch 87 Eval loss: 4.127, Acc: 0.2512315270935961
+Train
+Epoch 88 Train loss: 0.909
+Eval
+Epoch 88 Eval loss: 4.147, Acc: 0.2536945812807882
+Train
+Epoch 89 Train loss: 0.881
+Eval
+Epoch 89 Eval loss: 4.276, Acc: 0.24876847290640394
+Train
+Epoch 90 Train loss: 0.878
+Eval
+Epoch 90 Eval loss: 4.334, Acc: 0.24630541871921183
+Train
+Epoch 91 Train loss: 0.877
+Eval
+Epoch 91 Eval loss: 4.344, Acc: 0.26354679802955666
+Train
+Epoch 92 Train loss: 0.873
+Eval
+Epoch 92 Eval loss: 4.305, Acc: 0.229064039408867
+Train
+Epoch 93 Train loss: 0.854
+Eval
+Epoch 93 Eval loss: 4.279, Acc: 0.25862068965517243
+Train
+Epoch 94 Train loss: 0.876
+Eval
+Epoch 94 Eval loss: 4.338, Acc: 0.2536945812807882
+Train
+Epoch 95 Train loss: 0.838
+Eval
+Epoch 95 Eval loss: 4.281, Acc: 0.2512315270935961
+Train
+Epoch 96 Train loss: 0.836
+Eval
+Epoch 96 Eval loss: 4.344, Acc: 0.2438423645320197
+Train
+Epoch 97 Train loss: 0.846
+Eval
+Epoch 97 Eval loss: 4.404, Acc: 0.24630541871921183
+Train
+Epoch 98 Train loss: 0.840
+Eval
+Epoch 98 Eval loss: 4.361, Acc: 0.2512315270935961
+Train
+Epoch 99 Train loss: 0.796
+Eval
+Epoch 99 Eval loss: 4.406, Acc: 0.2438423645320197
+Loss curve is saved at ckpt4_2B/loss.png
+{'freeze_backbone': False, 'load_pretrain': True, 'setting_type': 'C', 'pretrain_path': './ckpt4_2_naive_backbone/improved-net.pt', 'ckpt_path': 'ckpt4_2C', 'data_path': './hw4_data/office/', 'batch_size': 16, 'learning_rate': 0.0003, 'n_epochs': 100, 'stepLR_step': 100, 'stepLR_gamma': 0.99}
+Using cuda:1
+1
+Train: 247
+Val: 26
+Load from ./ckpt4_2_naive_backbone/improved-net.pt
+No freeze backbone.
+Number of params: 25622097
+Train
+Epoch 0 Train loss: 4.004
+Eval
+Epoch 0 Eval loss: 3.774, Acc: 0.1477832512315271
+Save model
+Train
+Epoch 1 Train loss: 3.604
+Eval
+Epoch 1 Eval loss: 3.404, Acc: 0.22660098522167488
+Save model
+Train
+Epoch 2 Train loss: 3.273
+Eval
+Epoch 2 Eval loss: 3.081, Acc: 0.26108374384236455
+Save model
+Train
+Epoch 3 Train loss: 3.006
+Eval
+Epoch 3 Eval loss: 2.874, Acc: 0.3103448275862069
+Save model
+Train
+Epoch 4 Train loss: 2.797
+Eval
+Epoch 4 Eval loss: 2.688, Acc: 0.35714285714285715
+Save model
+Train
+Epoch 5 Train loss: 2.636
+Eval
+Epoch 5 Eval loss: 2.595, Acc: 0.37438423645320196
+Save model
+Train
+Epoch 6 Train loss: 2.502
+Eval
+Epoch 6 Eval loss: 2.495, Acc: 0.3842364532019704
+Save model
+Train
+Epoch 7 Train loss: 2.400
+Eval
+Epoch 7 Eval loss: 2.420, Acc: 0.4064039408866995
+Save model
+Train
+Epoch 8 Train loss: 2.313
+Eval
+Epoch 8 Eval loss: 2.345, Acc: 0.4064039408866995
+Save model
+Train
+Epoch 9 Train loss: 2.244
+Eval
+Epoch 9 Eval loss: 2.275, Acc: 0.4014778325123153
+Save model
+Train
+Epoch 10 Train loss: 2.169
+Eval
+Epoch 10 Eval loss: 2.227, Acc: 0.41625615763546797
+Save model
+Train
+Epoch 11 Train loss: 2.101
+Eval
+Epoch 11 Eval loss: 2.192, Acc: 0.43596059113300495
+Save model
+Train
+Epoch 12 Train loss: 2.050
+Eval
+Epoch 12 Eval loss: 2.147, Acc: 0.4458128078817734
+Save model
+Train
+Epoch 13 Train loss: 2.000
+Eval
+Epoch 13 Eval loss: 2.106, Acc: 0.4482758620689655
+Save model
+Train
+Epoch 14 Train loss: 1.937
+Eval
+Epoch 14 Eval loss: 2.077, Acc: 0.458128078817734
+Save model
+Train
+Epoch 15 Train loss: 1.907
+Eval
+Epoch 15 Eval loss: 2.047, Acc: 0.46551724137931033
+Save model
+Train
+Epoch 16 Train loss: 1.886
+Eval
+Epoch 16 Eval loss: 2.010, Acc: 0.47783251231527096
+Save model
+Train
+Epoch 17 Train loss: 1.840
+Eval
+Epoch 17 Eval loss: 2.002, Acc: 0.46798029556650245
+Save model
+Train
+Epoch 18 Train loss: 1.817
+Eval
+Epoch 18 Eval loss: 1.976, Acc: 0.4852216748768473
+Save model
+Train
+Epoch 19 Train loss: 1.774
+Eval
+Epoch 19 Eval loss: 1.933, Acc: 0.4852216748768473
+Save model
+Train
+Epoch 20 Train loss: 1.755
+Eval
+Epoch 20 Eval loss: 1.926, Acc: 0.5024630541871922
+Save model
+Train
+Epoch 21 Train loss: 1.712
+Eval
+Epoch 21 Eval loss: 1.906, Acc: 0.5
+Save model
+Train
+Epoch 22 Train loss: 1.692
+Eval
+Epoch 22 Eval loss: 1.882, Acc: 0.5320197044334976
+Save model
+Train
+Epoch 23 Train loss: 1.673
+Eval
+Epoch 23 Eval loss: 1.876, Acc: 0.5147783251231527
+Save model
+Train
+Epoch 24 Train loss: 1.646
+Eval
+Epoch 24 Eval loss: 1.870, Acc: 0.5172413793103449
+Save model
+Train
+Epoch 25 Train loss: 1.625
+Eval
+Epoch 25 Eval loss: 1.840, Acc: 0.5172413793103449
+Save model
+Train
+Epoch 26 Train loss: 1.614
+Eval
+Epoch 26 Eval loss: 1.821, Acc: 0.5270935960591133
+Save model
+Train
+Epoch 27 Train loss: 1.583
+Eval
+Epoch 27 Eval loss: 1.833, Acc: 0.5246305418719212
+Train
+Epoch 28 Train loss: 1.557
+Eval
+Epoch 28 Eval loss: 1.824, Acc: 0.5172413793103449
+Train
+Epoch 29 Train loss: 1.551
+Eval
+Epoch 29 Eval loss: 1.790, Acc: 0.5320197044334976
+Save model
+Train
+Epoch 30 Train loss: 1.517
+Eval
+Epoch 30 Eval loss: 1.774, Acc: 0.541871921182266
+Save model
+Train
+Epoch 31 Train loss: 1.506
+Eval
+Epoch 31 Eval loss: 1.787, Acc: 0.5295566502463054
+Train
+Epoch 32 Train loss: 1.487
+Eval
+Epoch 32 Eval loss: 1.779, Acc: 0.5295566502463054
+Train
+Epoch 33 Train loss: 1.493
+Eval
+Epoch 33 Eval loss: 1.760, Acc: 0.5344827586206896
+Save model
+Train
+Epoch 34 Train loss: 1.473
+Eval
+Epoch 34 Eval loss: 1.762, Acc: 0.5344827586206896
+Train
+Epoch 35 Train loss: 1.429
+Eval
+Epoch 35 Eval loss: 1.758, Acc: 0.5369458128078818
+Save model
+Train
+Epoch 36 Train loss: 1.449
+Eval
+Epoch 36 Eval loss: 1.753, Acc: 0.5541871921182266
+Save model
+Train
+Epoch 37 Train loss: 1.422
+Eval
+Epoch 37 Eval loss: 1.751, Acc: 0.5467980295566502
+Save model
+Train
+Epoch 38 Train loss: 1.412
+Eval
+Epoch 38 Eval loss: 1.737, Acc: 0.5541871921182266
+Save model
+Train
+Epoch 39 Train loss: 1.399
+Eval
+Epoch 39 Eval loss: 1.730, Acc: 0.5566502463054187
+Save model
+Train
+Epoch 40 Train loss: 1.363
+Eval
+Epoch 40 Eval loss: 1.732, Acc: 0.5443349753694581
+Train
+Epoch 41 Train loss: 1.360
+Eval
+Epoch 41 Eval loss: 1.745, Acc: 0.5591133004926109
+Train
+Epoch 42 Train loss: 1.367
+Eval
+Epoch 42 Eval loss: 1.709, Acc: 0.5665024630541872
+Save model
+Train
+Epoch 43 Train loss: 1.353
+Eval
+Epoch 43 Eval loss: 1.716, Acc: 0.5640394088669951
+Train
+Epoch 44 Train loss: 1.348
+Eval
+Epoch 44 Eval loss: 1.703, Acc: 0.5566502463054187
+Save model
+Train
+Epoch 45 Train loss: 1.345
+Eval
+Epoch 45 Eval loss: 1.684, Acc: 0.5640394088669951
+Save model
+Train
+Epoch 46 Train loss: 1.311
+Eval
+Epoch 46 Eval loss: 1.696, Acc: 0.5640394088669951
+Train
+Epoch 47 Train loss: 1.289
+Eval
+Epoch 47 Eval loss: 1.692, Acc: 0.5615763546798029
+Train
+Epoch 48 Train loss: 1.300
+Eval
+Epoch 48 Eval loss: 1.693, Acc: 0.5640394088669951
+Train
+Epoch 49 Train loss: 1.272
+Eval
+Epoch 49 Eval loss: 1.692, Acc: 0.5541871921182266
+Train
+Epoch 50 Train loss: 1.278
+Eval
+Epoch 50 Eval loss: 1.684, Acc: 0.5665024630541872
+Train
+Epoch 51 Train loss: 1.270
+Eval
+Epoch 51 Eval loss: 1.701, Acc: 0.5763546798029556
+Train
+Epoch 52 Train loss: 1.251
+Eval
+Epoch 52 Eval loss: 1.664, Acc: 0.5788177339901478
+Save model
+Train
+Epoch 53 Train loss: 1.247
+Eval
+Epoch 53 Eval loss: 1.684, Acc: 0.5665024630541872
+Train
+Epoch 54 Train loss: 1.239
+Eval
+Epoch 54 Eval loss: 1.656, Acc: 0.5591133004926109
+Save model
+Train
+Epoch 55 Train loss: 1.250
+Eval
+Epoch 55 Eval loss: 1.671, Acc: 0.5541871921182266
+Train
+Epoch 56 Train loss: 1.230
+Eval
+Epoch 56 Eval loss: 1.682, Acc: 0.5714285714285714
+Train
+Epoch 57 Train loss: 1.230
+Eval
+Epoch 57 Eval loss: 1.690, Acc: 0.5615763546798029
+Train
+Epoch 58 Train loss: 1.222
+Eval
+Epoch 58 Eval loss: 1.658, Acc: 0.5640394088669951
+Train
+Epoch 59 Train loss: 1.216
+Eval
+Epoch 59 Eval loss: 1.664, Acc: 0.5665024630541872
+Train
+Epoch 60 Train loss: 1.196
+Eval
+Epoch 60 Eval loss: 1.661, Acc: 0.5714285714285714
+Train
+Epoch 61 Train loss: 1.208
+Eval
+Epoch 61 Eval loss: 1.668, Acc: 0.5689655172413793
+Train
+Epoch 62 Train loss: 1.195
+Eval
+Epoch 62 Eval loss: 1.669, Acc: 0.5640394088669951
+Train
+Epoch 63 Train loss: 1.189
+Eval
+Epoch 63 Eval loss: 1.672, Acc: 0.5714285714285714
+Train
+Epoch 64 Train loss: 1.185
+Eval
+Epoch 64 Eval loss: 1.674, Acc: 0.5812807881773399
+Train
+Epoch 65 Train loss: 1.192
+Eval
+Epoch 65 Eval loss: 1.650, Acc: 0.5763546798029556
+Save model
+Train
+Epoch 66 Train loss: 1.160
+Eval
+Epoch 66 Eval loss: 1.660, Acc: 0.5689655172413793
+Train
+Epoch 67 Train loss: 1.159
+Eval
+Epoch 67 Eval loss: 1.645, Acc: 0.5591133004926109
+Save model
+Train
+Epoch 68 Train loss: 1.160
+Eval
+Epoch 68 Eval loss: 1.639, Acc: 0.5738916256157636
+Save model
+Train
+Epoch 69 Train loss: 1.150
+Eval
+Epoch 69 Eval loss: 1.665, Acc: 0.5812807881773399
+Train
+Epoch 70 Train loss: 1.136
+Eval
+Epoch 70 Eval loss: 1.654, Acc: 0.5689655172413793
+Train
+Epoch 71 Train loss: 1.147
+Eval
+Epoch 71 Eval loss: 1.645, Acc: 0.5714285714285714
+Train
+Epoch 72 Train loss: 1.136
+Eval
+Epoch 72 Eval loss: 1.648, Acc: 0.5763546798029556
+Train
+Epoch 73 Train loss: 1.136
+Eval
+Epoch 73 Eval loss: 1.657, Acc: 0.5886699507389163
+Train
+Epoch 74 Train loss: 1.131
+Eval
+Epoch 74 Eval loss: 1.648, Acc: 0.5788177339901478
+Train
+Epoch 75 Train loss: 1.152
+Eval
+Epoch 75 Eval loss: 1.653, Acc: 0.5615763546798029
+Train
+Epoch 76 Train loss: 1.128
+Eval
+Epoch 76 Eval loss: 1.630, Acc: 0.5812807881773399
+Save model
+Train
+Epoch 77 Train loss: 1.121
+Eval
+Epoch 77 Eval loss: 1.635, Acc: 0.5665024630541872
+Train
+Epoch 78 Train loss: 1.129
+Eval
+Epoch 78 Eval loss: 1.636, Acc: 0.5714285714285714
+Train
+Epoch 79 Train loss: 1.111
+Eval
+Epoch 79 Eval loss: 1.653, Acc: 0.5665024630541872
+Train
+Epoch 80 Train loss: 1.103
+Eval
+Epoch 80 Eval loss: 1.654, Acc: 0.5665024630541872
+Train
+Epoch 81 Train loss: 1.117
+Eval
+Epoch 81 Eval loss: 1.661, Acc: 0.5714285714285714
+Train
+Epoch 82 Train loss: 1.114
+Eval
+Epoch 82 Eval loss: 1.645, Acc: 0.5640394088669951
+Train
+Epoch 83 Train loss: 1.107
+Eval
+Epoch 83 Eval loss: 1.645, Acc: 0.5763546798029556
+Train
+Epoch 84 Train loss: 1.104
+Eval
+Epoch 84 Eval loss: 1.646, Acc: 0.5714285714285714
+Train
+Epoch 85 Train loss: 1.096
+Eval
+Epoch 85 Eval loss: 1.629, Acc: 0.5689655172413793
+Save model
+Train
+Epoch 86 Train loss: 1.081
+Eval
+Epoch 86 Eval loss: 1.631, Acc: 0.5886699507389163
+Train
+Epoch 87 Train loss: 1.081
+Eval
+Epoch 87 Eval loss: 1.637, Acc: 0.5788177339901478
+Train
+Epoch 88 Train loss: 1.078
+Eval
+Epoch 88 Eval loss: 1.630, Acc: 0.5763546798029556
+Train
+Epoch 89 Train loss: 1.071
+Eval
+Epoch 89 Eval loss: 1.625, Acc: 0.5738916256157636
+Save model
+Train
+Epoch 90 Train loss: 1.085
+Eval
+Epoch 90 Eval loss: 1.670, Acc: 0.5689655172413793
+Train
+Epoch 91 Train loss: 1.082
+Eval
+Epoch 91 Eval loss: 1.642, Acc: 0.5763546798029556
+Train
+Epoch 92 Train loss: 1.075
+Eval
+Epoch 92 Eval loss: 1.622, Acc: 0.5812807881773399
+Save model
+Train
+Epoch 93 Train loss: 1.069
+Eval
+Epoch 93 Eval loss: 1.626, Acc: 0.5763546798029556
+Train
+Epoch 94 Train loss: 1.071
+Eval
+Epoch 94 Eval loss: 1.651, Acc: 0.5812807881773399
+Train
+Epoch 95 Train loss: 1.068
+Eval
+Epoch 95 Eval loss: 1.629, Acc: 0.5665024630541872
+Train
+Epoch 96 Train loss: 1.056
+Eval
+Epoch 96 Eval loss: 1.660, Acc: 0.5862068965517241
+Train
+Epoch 97 Train loss: 1.056
+Eval
+Epoch 97 Eval loss: 1.643, Acc: 0.5714285714285714
+Train
+Epoch 98 Train loss: 1.070
+Eval
+Epoch 98 Eval loss: 1.618, Acc: 0.5862068965517241
+Save model
+Train
+Epoch 99 Train loss: 1.040
+Eval
+Epoch 99 Eval loss: 1.634, Acc: 0.5812807881773399
+Loss curve is saved at ckpt4_2C/loss.png
+{'freeze_backbone': 'True', 'load_pretrain': True, 'setting_type': 'D', 'pretrain_path': './hw4_data/pretrain_model_SL.pt', 'ckpt_path': 'ckpt4_2D', 'data_path': './hw4_data/office/', 'batch_size': 16, 'learning_rate': 0.0003, 'n_epochs': 100, 'stepLR_step': 100, 'stepLR_gamma': 0.99}
+Using cuda:1
+1
+Train: 247
+Val: 26
+Load from ./hw4_data/pretrain_model_SL.pt
+No freeze backbone.
+Number of params: 25622097
+Train
+Epoch 0 Train loss: 4.052
+Eval
+Epoch 0 Eval loss: 3.942, Acc: 0.11822660098522167
+Save model
+Train
+Epoch 1 Train loss: 3.685
+Eval
+Epoch 1 Eval loss: 3.858, Acc: 0.14532019704433496
+Save model
+Train
+Epoch 2 Train loss: 3.472
+Eval
+Epoch 2 Eval loss: 3.827, Acc: 0.15763546798029557
+Save model
+Train
+Epoch 3 Train loss: 3.295
+Eval
+Epoch 3 Eval loss: 3.707, Acc: 0.1748768472906404
+Save model
+Train
+Epoch 4 Train loss: 3.190
+Eval
+Epoch 4 Eval loss: 3.872, Acc: 0.1921182266009852
+Train
+Epoch 5 Train loss: 3.105
+Eval
+Epoch 5 Eval loss: 3.735, Acc: 0.2044334975369458
+Train
+Epoch 6 Train loss: 3.014
+Eval
+Epoch 6 Eval loss: 3.409, Acc: 0.2019704433497537
+Save model
+Train
+Epoch 7 Train loss: 2.928
+Eval
+Epoch 7 Eval loss: 3.258, Acc: 0.2315270935960591
+Save model
+Train
+Epoch 8 Train loss: 2.866
+Eval
+Epoch 8 Eval loss: 3.300, Acc: 0.21674876847290642
+Train
+Epoch 9 Train loss: 2.801
+Eval
+Epoch 9 Eval loss: 3.163, Acc: 0.22413793103448276
+Save model
+Train
+Epoch 10 Train loss: 2.724
+Eval
+Epoch 10 Eval loss: 3.222, Acc: 0.2315270935960591
+Train
+Epoch 11 Train loss: 2.671
+Eval
+Epoch 11 Eval loss: 3.190, Acc: 0.21428571428571427
+Train
+Epoch 12 Train loss: 2.617
+Eval
+Epoch 12 Eval loss: 3.093, Acc: 0.20935960591133004
+Save model
+Train
+Epoch 13 Train loss: 2.568
+Eval
+Epoch 13 Eval loss: 3.139, Acc: 0.229064039408867
+Train
+Epoch 14 Train loss: 2.519
+Eval
+Epoch 14 Eval loss: 3.093, Acc: 0.21674876847290642
+Save model
+Train
+Epoch 15 Train loss: 2.491
+Eval
+Epoch 15 Eval loss: 3.136, Acc: 0.21428571428571427
+Train
+Epoch 16 Train loss: 2.440
+Eval
+Epoch 16 Eval loss: 3.126, Acc: 0.22413793103448276
+Train
+Epoch 17 Train loss: 2.399
+Eval
+Epoch 17 Eval loss: 3.087, Acc: 0.22413793103448276
+Save model
+Train
+Epoch 18 Train loss: 2.359
+Eval
+Epoch 18 Eval loss: 3.073, Acc: 0.229064039408867
+Save model
+Train
+Epoch 19 Train loss: 2.311
+Eval
+Epoch 19 Eval loss: 3.138, Acc: 0.21921182266009853
+Train
+Epoch 20 Train loss: 2.283
+Eval
+Epoch 20 Eval loss: 3.112, Acc: 0.2315270935960591
+Train
+Epoch 21 Train loss: 2.252
+Eval
+Epoch 21 Eval loss: 3.115, Acc: 0.22660098522167488
+Train
+Epoch 22 Train loss: 2.199
+Eval
+Epoch 22 Eval loss: 3.199, Acc: 0.229064039408867
+Train
+Epoch 23 Train loss: 2.181
+Eval
+Epoch 23 Eval loss: 3.198, Acc: 0.22167487684729065
+Train
+Epoch 24 Train loss: 2.147
+Eval
+Epoch 24 Eval loss: 3.247, Acc: 0.22413793103448276
+Train
+Epoch 25 Train loss: 2.101
+Eval
+Epoch 25 Eval loss: 3.237, Acc: 0.22167487684729065
+Train
+Epoch 26 Train loss: 2.067
+Eval
+Epoch 26 Eval loss: 3.257, Acc: 0.21428571428571427
+Train
+Epoch 27 Train loss: 2.046
+Eval
+Epoch 27 Eval loss: 3.208, Acc: 0.23645320197044334
+Train
+Epoch 28 Train loss: 2.000
+Eval
+Epoch 28 Eval loss: 3.173, Acc: 0.22167487684729065
+Train
+Epoch 29 Train loss: 1.973
+Eval
+Epoch 29 Eval loss: 3.228, Acc: 0.21674876847290642
+Train
+Epoch 30 Train loss: 1.945
+Eval
+Epoch 30 Eval loss: 3.201, Acc: 0.229064039408867
+Train
+Epoch 31 Train loss: 1.886
+Eval
+Epoch 31 Eval loss: 3.226, Acc: 0.23399014778325122
+Train
+Epoch 32 Train loss: 1.875
+Eval
+Epoch 32 Eval loss: 3.323, Acc: 0.23399014778325122
+Train
+Epoch 33 Train loss: 1.856
+Eval
+Epoch 33 Eval loss: 3.282, Acc: 0.23399014778325122
+Train
+Epoch 34 Train loss: 1.815
+Eval
+Epoch 34 Eval loss: 3.277, Acc: 0.2315270935960591
+Train
+Epoch 35 Train loss: 1.769
+Eval
+Epoch 35 Eval loss: 3.353, Acc: 0.21921182266009853
+Train
+Epoch 36 Train loss: 1.765
+Eval
+Epoch 36 Eval loss: 3.350, Acc: 0.23399014778325122
+Train
+Epoch 37 Train loss: 1.710
+Eval
+Epoch 37 Eval loss: 3.395, Acc: 0.23645320197044334
+Train
+Epoch 38 Train loss: 1.707
+Eval
+Epoch 38 Eval loss: 3.416, Acc: 0.2315270935960591
+Train
+Epoch 39 Train loss: 1.705
+Eval
+Epoch 39 Eval loss: 3.477, Acc: 0.22660098522167488
+Train
+Epoch 40 Train loss: 1.648
+Eval
+Epoch 40 Eval loss: 3.484, Acc: 0.22413793103448276
+Train
+Epoch 41 Train loss: 1.626
+Eval
+Epoch 41 Eval loss: 3.413, Acc: 0.22660098522167488
+Train
+Epoch 42 Train loss: 1.613
+Eval
+Epoch 42 Eval loss: 3.463, Acc: 0.23645320197044334
+Train
+Epoch 43 Train loss: 1.582
+Eval
+Epoch 43 Eval loss: 3.422, Acc: 0.22413793103448276
+Train
+Epoch 44 Train loss: 1.540
+Eval
+Epoch 44 Eval loss: 3.614, Acc: 0.23399014778325122
+Train
+Epoch 45 Train loss: 1.542
+Eval
+Epoch 45 Eval loss: 3.584, Acc: 0.23399014778325122
+Train
+Epoch 46 Train loss: 1.485
+Eval
+Epoch 46 Eval loss: 3.518, Acc: 0.23891625615763548
+Train
+Epoch 47 Train loss: 1.479
+Eval
+Epoch 47 Eval loss: 3.579, Acc: 0.24630541871921183
+Train
+Epoch 48 Train loss: 1.454
+Eval
+Epoch 48 Eval loss: 3.593, Acc: 0.23891625615763548
+Train
+Epoch 49 Train loss: 1.449
+Eval
+Epoch 49 Eval loss: 3.614, Acc: 0.23891625615763548
+Train
+Epoch 50 Train loss: 1.405
+Eval
+Epoch 50 Eval loss: 3.671, Acc: 0.23645320197044334
+Train
+Epoch 51 Train loss: 1.397
+Eval
+Epoch 51 Eval loss: 3.747, Acc: 0.23891625615763548
+Train
+Epoch 52 Train loss: 1.382
+Eval
+Epoch 52 Eval loss: 3.671, Acc: 0.23891625615763548
+Train
+Epoch 53 Train loss: 1.339
+Eval
+Epoch 53 Eval loss: 3.738, Acc: 0.2315270935960591
+Train
+Epoch 54 Train loss: 1.330
+Eval
+Epoch 54 Eval loss: 3.774, Acc: 0.23645320197044334
+Train
+Epoch 55 Train loss: 1.312
+Eval
+Epoch 55 Eval loss: 3.671, Acc: 0.23645320197044334
+Train
+Epoch 56 Train loss: 1.297
+Eval
+Epoch 56 Eval loss: 3.812, Acc: 0.229064039408867
+Train
+Epoch 57 Train loss: 1.282
+Eval
+Epoch 57 Eval loss: 3.880, Acc: 0.23891625615763548
+Train
+Epoch 58 Train loss: 1.287
+Eval
+Epoch 58 Eval loss: 3.864, Acc: 0.23891625615763548
+Train
+Epoch 59 Train loss: 1.258
+Eval
+Epoch 59 Eval loss: 3.789, Acc: 0.2536945812807882
+Train
+Epoch 60 Train loss: 1.241
+Eval
+Epoch 60 Eval loss: 3.857, Acc: 0.2536945812807882
+Train
+Epoch 61 Train loss: 1.230
+Eval
+Epoch 61 Eval loss: 3.725, Acc: 0.24630541871921183
+Train
+Epoch 62 Train loss: 1.204
+Eval
+Epoch 62 Eval loss: 3.929, Acc: 0.2315270935960591
+Train
+Epoch 63 Train loss: 1.172
+Eval
+Epoch 63 Eval loss: 4.026, Acc: 0.23891625615763548
+Train
+Epoch 64 Train loss: 1.172
+Eval
+Epoch 64 Eval loss: 3.932, Acc: 0.24876847290640394
+Train
+Epoch 65 Train loss: 1.155
+Eval
+Epoch 65 Eval loss: 3.985, Acc: 0.23645320197044334
+Train
+Epoch 66 Train loss: 1.132
+Eval
+Epoch 66 Eval loss: 3.894, Acc: 0.2512315270935961
+Train
+Epoch 67 Train loss: 1.119
+Eval
+Epoch 67 Eval loss: 3.924, Acc: 0.23645320197044334
+Train
+Epoch 68 Train loss: 1.095
+Eval
+Epoch 68 Eval loss: 4.070, Acc: 0.23399014778325122
+Train
+Epoch 69 Train loss: 1.089
+Eval
+Epoch 69 Eval loss: 4.028, Acc: 0.2438423645320197
+Train
+Epoch 70 Train loss: 1.069
+Eval
+Epoch 70 Eval loss: 3.943, Acc: 0.24630541871921183
+Train
+Epoch 71 Train loss: 1.066
+Eval
+Epoch 71 Eval loss: 3.956, Acc: 0.23891625615763548
+Train
+Epoch 72 Train loss: 1.044
+Eval
+Epoch 72 Eval loss: 4.045, Acc: 0.2438423645320197
+Train
+Epoch 73 Train loss: 1.033
+Eval
+Epoch 73 Eval loss: 4.013, Acc: 0.24630541871921183
+Train
+Epoch 74 Train loss: 1.057
+Eval
+Epoch 74 Eval loss: 4.051, Acc: 0.2561576354679803
+Train
+Epoch 75 Train loss: 1.045
+Eval
+Epoch 75 Eval loss: 4.031, Acc: 0.24876847290640394
+Train
+Epoch 76 Train loss: 1.008
+Eval
+Epoch 76 Eval loss: 4.079, Acc: 0.2512315270935961
+Train
+Epoch 77 Train loss: 1.013
+Eval
+Epoch 77 Eval loss: 4.090, Acc: 0.24630541871921183
+Train
+Epoch 78 Train loss: 0.986
+Eval
+Epoch 78 Eval loss: 4.136, Acc: 0.2438423645320197
+Train
+Epoch 79 Train loss: 0.972
+Eval
+Epoch 79 Eval loss: 4.154, Acc: 0.2413793103448276
+Train
+Epoch 80 Train loss: 0.961
+Eval
+Epoch 80 Eval loss: 4.046, Acc: 0.2315270935960591
+Train
+Epoch 81 Train loss: 0.974
+Eval
+Epoch 81 Eval loss: 4.096, Acc: 0.24630541871921183
+Train
+Epoch 82 Train loss: 0.968
+Eval
+Epoch 82 Eval loss: 4.166, Acc: 0.24876847290640394
+Train
+Epoch 83 Train loss: 0.933
+Eval
+Epoch 83 Eval loss: 4.187, Acc: 0.24630541871921183
+Train
+Epoch 84 Train loss: 0.911
+Eval
+Epoch 84 Eval loss: 4.080, Acc: 0.23399014778325122
+Train
+Epoch 85 Train loss: 0.934
+Eval
+Epoch 85 Eval loss: 4.206, Acc: 0.2438423645320197
+Train
+Epoch 86 Train loss: 0.906
+Eval
+Epoch 86 Eval loss: 4.253, Acc: 0.25862068965517243
+Train
+Epoch 87 Train loss: 0.905
+Eval
+Epoch 87 Eval loss: 4.127, Acc: 0.2512315270935961
+Train
+Epoch 88 Train loss: 0.909
+Eval
+Epoch 88 Eval loss: 4.147, Acc: 0.2536945812807882
+Train
+Epoch 89 Train loss: 0.881
+Eval
+Epoch 89 Eval loss: 4.276, Acc: 0.24876847290640394
+Train
+Epoch 90 Train loss: 0.878
+Eval
+Epoch 90 Eval loss: 4.334, Acc: 0.24630541871921183
+Train
+Epoch 91 Train loss: 0.877
+Eval
+Epoch 91 Eval loss: 4.344, Acc: 0.26354679802955666
+Train
+Epoch 92 Train loss: 0.873
+Eval
+Epoch 92 Eval loss: 4.305, Acc: 0.229064039408867
+Train
+Epoch 93 Train loss: 0.854
+Eval
+Epoch 93 Eval loss: 4.279, Acc: 0.25862068965517243
+Train
+Epoch 94 Train loss: 0.876
+Eval
+Epoch 94 Eval loss: 4.338, Acc: 0.2536945812807882
+Train
+Epoch 95 Train loss: 0.838
+Eval
+Epoch 95 Eval loss: 4.281, Acc: 0.2512315270935961
+Train
+Epoch 96 Train loss: 0.836
+Eval
+Epoch 96 Eval loss: 4.344, Acc: 0.2438423645320197
+Train
+Epoch 97 Train loss: 0.846
+Eval
+Epoch 97 Eval loss: 4.404, Acc: 0.24630541871921183
+Train
+Epoch 98 Train loss: 0.840
+Eval
+Epoch 98 Eval loss: 4.361, Acc: 0.2512315270935961
+Train
+Epoch 99 Train loss: 0.796
+Eval
+Epoch 99 Eval loss: 4.406, Acc: 0.2438423645320197
+Loss curve is saved at ckpt4_2D/loss.png
+{'freeze_backbone': 'True', 'load_pretrain': True, 'setting_type': 'E', 'pretrain_path': './ckpt4_2_naive_backbone/improved-net.pt', 'ckpt_path': 'ckpt4_2E', 'data_path': './hw4_data/office/', 'batch_size': 16, 'learning_rate': 0.0003, 'n_epochs': 100, 'stepLR_step': 100, 'stepLR_gamma': 0.99}
+Using cuda:1
+1
+Train: 247
+Val: 26
+Load from ./ckpt4_2_naive_backbone/improved-net.pt
+No freeze backbone.
+Number of params: 25622097
+Train
+Epoch 0 Train loss: 4.004
+Eval
+Epoch 0 Eval loss: 3.774, Acc: 0.1477832512315271
+Save model
+Train
+Epoch 1 Train loss: 3.604
+Eval
+Epoch 1 Eval loss: 3.404, Acc: 0.22660098522167488
+Save model
+Train
+Epoch 2 Train loss: 3.273
+Eval
+Epoch 2 Eval loss: 3.081, Acc: 0.26108374384236455
+Save model
+Train
+Epoch 3 Train loss: 3.006
+Eval
+Epoch 3 Eval loss: 2.874, Acc: 0.3103448275862069
+Save model
+Train
+Epoch 4 Train loss: 2.797
+Eval
+Epoch 4 Eval loss: 2.688, Acc: 0.35714285714285715
+Save model
+Train
+Epoch 5 Train loss: 2.636
+Eval
+Epoch 5 Eval loss: 2.595, Acc: 0.37438423645320196
+Save model
+Train
+Epoch 6 Train loss: 2.502
+Eval
+Epoch 6 Eval loss: 2.495, Acc: 0.3842364532019704
+Save model
+Train
+Epoch 7 Train loss: 2.400
+Eval
+Epoch 7 Eval loss: 2.420, Acc: 0.4064039408866995
+Save model
+Train
+Epoch 8 Train loss: 2.313
+Eval
+Epoch 8 Eval loss: 2.345, Acc: 0.4064039408866995
+Save model
+Train
+Epoch 9 Train loss: 2.244
+Eval
+Epoch 9 Eval loss: 2.275, Acc: 0.4014778325123153
+Save model
+Train
+Epoch 10 Train loss: 2.169
+Eval
+Epoch 10 Eval loss: 2.227, Acc: 0.41625615763546797
+Save model
+Train
+Epoch 11 Train loss: 2.101
+Eval
+Epoch 11 Eval loss: 2.192, Acc: 0.43596059113300495
+Save model
+Train
+Epoch 12 Train loss: 2.050
+Eval
+Epoch 12 Eval loss: 2.147, Acc: 0.4458128078817734
+Save model
+Train
+Epoch 13 Train loss: 2.000
+Eval
+Epoch 13 Eval loss: 2.106, Acc: 0.4482758620689655
+Save model
+Train
+Epoch 14 Train loss: 1.937
+Eval
+Epoch 14 Eval loss: 2.077, Acc: 0.458128078817734
+Save model
+Train
+Epoch 15 Train loss: 1.907
+Eval
+Epoch 15 Eval loss: 2.047, Acc: 0.46551724137931033
+Save model
+Train
+Epoch 16 Train loss: 1.886
+Eval
+Epoch 16 Eval loss: 2.010, Acc: 0.47783251231527096
+Save model
+Train
+Epoch 17 Train loss: 1.840
+Eval
+Epoch 17 Eval loss: 2.002, Acc: 0.46798029556650245
+Save model
+Train
+Epoch 18 Train loss: 1.817
+Eval
+Epoch 18 Eval loss: 1.976, Acc: 0.4852216748768473
+Save model
+Train
+Epoch 19 Train loss: 1.774
+Eval
+Epoch 19 Eval loss: 1.933, Acc: 0.4852216748768473
+Save model
+Train
+Epoch 20 Train loss: 1.755
+Eval
+Epoch 20 Eval loss: 1.926, Acc: 0.5024630541871922
+Save model
+Train
+Epoch 21 Train loss: 1.712
+Eval
+Epoch 21 Eval loss: 1.906, Acc: 0.5
+Save model
+Train
+Epoch 22 Train loss: 1.692
+Eval
+Epoch 22 Eval loss: 1.882, Acc: 0.5320197044334976
+Save model
+Train
+Epoch 23 Train loss: 1.673
+Eval
+Epoch 23 Eval loss: 1.876, Acc: 0.5147783251231527
+Save model
+Train
+Epoch 24 Train loss: 1.646
+Eval
+Epoch 24 Eval loss: 1.870, Acc: 0.5172413793103449
+Save model
+Train
+Epoch 25 Train loss: 1.625
+Eval
+Epoch 25 Eval loss: 1.840, Acc: 0.5172413793103449
+Save model
+Train
+Epoch 26 Train loss: 1.614
+Eval
+Epoch 26 Eval loss: 1.821, Acc: 0.5270935960591133
+Save model
+Train
+Epoch 27 Train loss: 1.583
+Eval
+Epoch 27 Eval loss: 1.833, Acc: 0.5246305418719212
+Train
+Epoch 28 Train loss: 1.557
+Eval
+Epoch 28 Eval loss: 1.824, Acc: 0.5172413793103449
+Train
+Epoch 29 Train loss: 1.551
+Eval
+Epoch 29 Eval loss: 1.790, Acc: 0.5320197044334976
+Save model
+Train
+Epoch 30 Train loss: 1.517
+Eval
+Epoch 30 Eval loss: 1.774, Acc: 0.541871921182266
+Save model
+Train
+Epoch 31 Train loss: 1.506
+Eval
+Epoch 31 Eval loss: 1.787, Acc: 0.5295566502463054
+Train
+Epoch 32 Train loss: 1.487
+Eval
+Epoch 32 Eval loss: 1.779, Acc: 0.5295566502463054
+Train
+Epoch 33 Train loss: 1.493
+Eval
+Epoch 33 Eval loss: 1.760, Acc: 0.5344827586206896
+Save model
+Train
+Epoch 34 Train loss: 1.473
+Eval
+Epoch 34 Eval loss: 1.762, Acc: 0.5344827586206896
+Train
+Epoch 35 Train loss: 1.429
+Eval
+Epoch 35 Eval loss: 1.758, Acc: 0.5369458128078818
+Save model
+Train
+Epoch 36 Train loss: 1.449
+Eval
+Epoch 36 Eval loss: 1.753, Acc: 0.5541871921182266
+Save model
+Train
+Epoch 37 Train loss: 1.422
+Eval
+Epoch 37 Eval loss: 1.751, Acc: 0.5467980295566502
+Save model
+Train
+Epoch 38 Train loss: 1.412
+Eval
+Epoch 38 Eval loss: 1.737, Acc: 0.5541871921182266
+Save model
+Train
+Epoch 39 Train loss: 1.399
+Eval
+Epoch 39 Eval loss: 1.730, Acc: 0.5566502463054187
+Save model
+Train
+Epoch 40 Train loss: 1.363
+Eval
+Epoch 40 Eval loss: 1.732, Acc: 0.5443349753694581
+Train
+Epoch 41 Train loss: 1.360
+Eval
+Epoch 41 Eval loss: 1.745, Acc: 0.5591133004926109
+Train
+Epoch 42 Train loss: 1.367
+Eval
+Epoch 42 Eval loss: 1.709, Acc: 0.5665024630541872
+Save model
+Train
+Epoch 43 Train loss: 1.353
+Eval
+Epoch 43 Eval loss: 1.716, Acc: 0.5640394088669951
+Train
+Epoch 44 Train loss: 1.348
+Eval
+Epoch 44 Eval loss: 1.703, Acc: 0.5566502463054187
+Save model
+Train
+Epoch 45 Train loss: 1.345
+Eval
+Epoch 45 Eval loss: 1.684, Acc: 0.5640394088669951
+Save model
+Train
+Epoch 46 Train loss: 1.311
+Eval
+Epoch 46 Eval loss: 1.696, Acc: 0.5640394088669951
+Train
+Epoch 47 Train loss: 1.289
+Eval
+Epoch 47 Eval loss: 1.692, Acc: 0.5615763546798029
+Train
+Epoch 48 Train loss: 1.300
+Eval
+Epoch 48 Eval loss: 1.693, Acc: 0.5640394088669951
+Train
+Epoch 49 Train loss: 1.272
+Eval
+Epoch 49 Eval loss: 1.692, Acc: 0.5541871921182266
+Train
+Epoch 50 Train loss: 1.278
+Eval
+Epoch 50 Eval loss: 1.684, Acc: 0.5665024630541872
+Train
+Epoch 51 Train loss: 1.270
+Eval
+Epoch 51 Eval loss: 1.701, Acc: 0.5763546798029556
+Train
+Epoch 52 Train loss: 1.251
+Eval
+Epoch 52 Eval loss: 1.664, Acc: 0.5788177339901478
+Save model
+Train
+Epoch 53 Train loss: 1.247
+Eval
+Epoch 53 Eval loss: 1.684, Acc: 0.5665024630541872
+Train
+Epoch 54 Train loss: 1.239
+Eval
+Epoch 54 Eval loss: 1.656, Acc: 0.5591133004926109
+Save model
+Train
+Epoch 55 Train loss: 1.250
+Eval
+Epoch 55 Eval loss: 1.671, Acc: 0.5541871921182266
+Train
+Epoch 56 Train loss: 1.230
+Eval
+Epoch 56 Eval loss: 1.682, Acc: 0.5714285714285714
+Train
+Epoch 57 Train loss: 1.230
+Eval
+Epoch 57 Eval loss: 1.690, Acc: 0.5615763546798029
+Train
+Epoch 58 Train loss: 1.222
+Eval
+Epoch 58 Eval loss: 1.658, Acc: 0.5640394088669951
+Train
+Epoch 59 Train loss: 1.216
+Eval
+Epoch 59 Eval loss: 1.664, Acc: 0.5665024630541872
+Train
+Epoch 60 Train loss: 1.196
+Eval
+Epoch 60 Eval loss: 1.661, Acc: 0.5714285714285714
+Train
+Epoch 61 Train loss: 1.208
+Eval
+Epoch 61 Eval loss: 1.668, Acc: 0.5689655172413793
+Train
+Epoch 62 Train loss: 1.195
+Eval
+Epoch 62 Eval loss: 1.669, Acc: 0.5640394088669951
+Train
+Epoch 63 Train loss: 1.189
+Eval
+Epoch 63 Eval loss: 1.672, Acc: 0.5714285714285714
+Train
+Epoch 64 Train loss: 1.185
+Eval
+Epoch 64 Eval loss: 1.674, Acc: 0.5812807881773399
+Train
+Epoch 65 Train loss: 1.192
+Eval
+Epoch 65 Eval loss: 1.650, Acc: 0.5763546798029556
+Save model
+Train
+Epoch 66 Train loss: 1.160
+Eval
+Epoch 66 Eval loss: 1.660, Acc: 0.5689655172413793
+Train
+Epoch 67 Train loss: 1.159
+Eval
+Epoch 67 Eval loss: 1.645, Acc: 0.5591133004926109
+Save model
+Train
+Epoch 68 Train loss: 1.160
+Eval
+Epoch 68 Eval loss: 1.639, Acc: 0.5738916256157636
+Save model
+Train
+Epoch 69 Train loss: 1.150
+Eval
+Epoch 69 Eval loss: 1.665, Acc: 0.5812807881773399
+Train
+Epoch 70 Train loss: 1.136
+Eval
+Epoch 70 Eval loss: 1.654, Acc: 0.5689655172413793
+Train
+Epoch 71 Train loss: 1.147
+Eval
+Epoch 71 Eval loss: 1.645, Acc: 0.5714285714285714
+Train
+Epoch 72 Train loss: 1.136
+Eval
+Epoch 72 Eval loss: 1.648, Acc: 0.5763546798029556
+Train
+Epoch 73 Train loss: 1.136
+Eval
+Epoch 73 Eval loss: 1.657, Acc: 0.5886699507389163
+Train
+Epoch 74 Train loss: 1.131
+Eval
+Epoch 74 Eval loss: 1.648, Acc: 0.5788177339901478
+Train
+Epoch 75 Train loss: 1.152
+Eval
+Epoch 75 Eval loss: 1.653, Acc: 0.5615763546798029
+Train
+Epoch 76 Train loss: 1.128
+Eval
+Epoch 76 Eval loss: 1.630, Acc: 0.5812807881773399
+Save model
+Train
+Epoch 77 Train loss: 1.121
+Eval
+Epoch 77 Eval loss: 1.635, Acc: 0.5665024630541872
+Train
+Epoch 78 Train loss: 1.129
+Eval
+Epoch 78 Eval loss: 1.636, Acc: 0.5714285714285714
+Train
+Epoch 79 Train loss: 1.111
+Eval
+Epoch 79 Eval loss: 1.653, Acc: 0.5665024630541872
+Train
+Epoch 80 Train loss: 1.103
+Eval
+Epoch 80 Eval loss: 1.654, Acc: 0.5665024630541872
+Train
+Epoch 81 Train loss: 1.117
+Eval
+Epoch 81 Eval loss: 1.661, Acc: 0.5714285714285714
+Train
+Epoch 82 Train loss: 1.114
+Eval
+Epoch 82 Eval loss: 1.645, Acc: 0.5640394088669951
+Train
+Epoch 83 Train loss: 1.107
+Eval
+Epoch 83 Eval loss: 1.645, Acc: 0.5763546798029556
+Train
+Epoch 84 Train loss: 1.104
+Eval
+Epoch 84 Eval loss: 1.646, Acc: 0.5714285714285714
+Train
+Epoch 85 Train loss: 1.096
+Eval
+Epoch 85 Eval loss: 1.629, Acc: 0.5689655172413793
+Save model
+Train
+Epoch 86 Train loss: 1.081
+Eval
+Epoch 86 Eval loss: 1.631, Acc: 0.5886699507389163
+Train
+Epoch 87 Train loss: 1.081
+Eval
+Epoch 87 Eval loss: 1.637, Acc: 0.5788177339901478
+Train
+Epoch 88 Train loss: 1.078
+Eval
+Epoch 88 Eval loss: 1.630, Acc: 0.5763546798029556
+Train
+Epoch 89 Train loss: 1.071
+Eval
+Epoch 89 Eval loss: 1.625, Acc: 0.5738916256157636
+Save model
+Train
+Epoch 90 Train loss: 1.085
+Eval
+Epoch 90 Eval loss: 1.670, Acc: 0.5689655172413793
+Train
+Epoch 91 Train loss: 1.082
+Eval
+Epoch 91 Eval loss: 1.642, Acc: 0.5763546798029556
+Train
+Epoch 92 Train loss: 1.075
+Eval
+Epoch 92 Eval loss: 1.622, Acc: 0.5812807881773399
+Save model
+Train
+Epoch 93 Train loss: 1.069
+Eval
+Epoch 93 Eval loss: 1.626, Acc: 0.5763546798029556
+Train
+Epoch 94 Train loss: 1.071
+Eval
+Epoch 94 Eval loss: 1.651, Acc: 0.5812807881773399
+Train
+Epoch 95 Train loss: 1.068
+Eval
+Epoch 95 Eval loss: 1.629, Acc: 0.5665024630541872
+Train
+Epoch 96 Train loss: 1.056
+Eval
+Epoch 96 Eval loss: 1.660, Acc: 0.5862068965517241
+Train
+Epoch 97 Train loss: 1.056
+Eval
+Epoch 97 Eval loss: 1.643, Acc: 0.5714285714285714
+Train
+Epoch 98 Train loss: 1.070
+Eval
+Epoch 98 Eval loss: 1.618, Acc: 0.5862068965517241
+Save model
+Train
+Epoch 99 Train loss: 1.040
+Eval
+Epoch 99 Eval loss: 1.634, Acc: 0.5812807881773399
+Loss curve is saved at ckpt4_2E/loss.png

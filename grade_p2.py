@@ -9,9 +9,9 @@ with open('./output_p2/test_pred.csv') as file:
     for row in csvreader:
         id, filename, pred = row
         # https://stackoverflow.com/questions/8270784/how-to-split-a-string-between-letters-and-digits-or-between-digits-and-letters
-        print(filename)
+        # print(filename)
         gth = re.split('(\d+)', filename)[0]
-        print(gth, pred)
+        # print(gth, pred)
         if gth == pred:
             count += 1
         total+=1

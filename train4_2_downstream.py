@@ -181,14 +181,14 @@ if __name__ == "__main__":
     model = DownStreamResnet(n_class=65, is_pretrain=False)
 
     # load pretrain
-    if load_pretrain == True:
+    if load_pretrain:
         print(f"Load from {pretrain_path}")
         checkpoint = torch.load(pretrain_path, map_location = device)
         model.resnet.load_state_dict(checkpoint)
     else: 
         print("No pretrain resnet.")
     
-    if freeze_backbone == True:
+    if freeze_backbone:
         print(f"Freeze Backbone")
         for param in model.resnet.parameters():
             param.requires_grad = False

@@ -100,9 +100,10 @@ coarse_model_and_render = dict(
     fast_color_thres=1e-7,        # threshold of alpha value to skip the fine stage sampled point
     maskout_near_cam_vox=True,    # maskout grid points that between cameras and their near planes
     world_bound_scale=1,          # rescale the BBox enclosing the scene
-    stepsize=0.5,                 # sampling stepsize in volume rendering
+    stepsize=0.5,                 # sampling stepsize in volume rendering ## Comparison: Change to 2
 )
 
+# update config of fine render version 
 fine_model_and_render = deepcopy(coarse_model_and_render)
 fine_model_and_render.update(dict(
     num_voxels=160**3,

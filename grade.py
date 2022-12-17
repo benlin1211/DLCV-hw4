@@ -104,8 +104,9 @@ def render_viewpoints(test_image_path, gt_image_path):
         print("psnr:", p)
         psnrs.append(p)
         ssims.append(rgb_ssim(rgb, gt, max_val=1))
-        lpips_alex.append(rgb_lpips(rgb, gt, net_name='alex', device=device))
         lpips_vgg.append(rgb_lpips(rgb, gt, net_name='vgg', device=device))
+        lpips_alex.append(rgb_lpips(rgb, gt, net_name='alex', device=device))
+        
 
     if len(psnrs):
         print('Testing psnr', np.mean(psnrs), '(avg)')

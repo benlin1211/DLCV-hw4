@@ -2,7 +2,7 @@
 # TODO - run your inference Python3 code
 
 python DirectVoxGO/run_eval.py --json_dir $1 --output_dir $2 \
- --config ./train4_1_config_blender.py --render_val --render_only 
+ --config ./train4_1_config_blender.py --render_val --render_only
 
 # bash hw4_1.sh './hw4_data/hotdog/transforms_val.json' './output_p1/'
 # bash hw4_1.sh './hw4_data_test/hotdog/transforms_test.json' './output_p1/'
@@ -12,7 +12,11 @@ python DirectVoxGO/run_eval.py --json_dir $1 --output_dir $2 \
 # # $2: path of the folder to put output image (e.g., *.png)
 # # the filename should be same as stated in transform_test.json file. The image size should be the same as training set, 800x800 pixel.
 
+# python DirectVoxGO/run_eval.py --json_dir $1 --output_dir $2 \
+#  --config ./train4_1_config_blender.py --render_val --render_only --export_coarse_only="True"
+
 
 # python grade.py './output_p1/' './hw4_data/hotdog/val' 
 # # $1 is the path to the folder of generated image (white background)
 # # $2 is the path to the folder of gt image
+

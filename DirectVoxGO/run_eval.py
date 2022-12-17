@@ -323,7 +323,7 @@ if __name__=='__main__':
         model = utils.load_model(model_class, ckpt_path).to(device)
         stepsize = cfg.fine_model_and_render.stepsize
         # stepsize = 3
-        print("stepsize 123", stepsize)
+        print("stepsize:", stepsize)
         render_viewpoints_kwargs = {
             'model': model,
             'ndc': cfg.data.ndc,

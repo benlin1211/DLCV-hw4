@@ -3,6 +3,7 @@ scipy
 tqdm
 lpips
 mmcv
+gdown
 Pillow==9.2.0
 imageio==2.22.4
 imageio-ffmpeg

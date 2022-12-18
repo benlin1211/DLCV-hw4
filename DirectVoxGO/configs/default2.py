@@ -106,8 +106,8 @@ coarse_model_and_render = dict(
 # update config of fine render version 
 fine_model_and_render = deepcopy(coarse_model_and_render)
 fine_model_and_render.update(dict(
-    num_voxels=160**3,   ## Comparison: Change to 140**3
-    num_voxels_base=160**3,  ## Comparison: Change to 140**3
+    num_voxels=120**3,   ## Comparison: Change to 140**3
+    num_voxels_base=120**3,  ## Comparison: Change to 140**3
     rgbnet_dim=12,
     alpha_init=1e-2,
     fast_color_thres=1e-4,

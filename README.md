@@ -11,8 +11,8 @@ To start working on this assignment, you should clone this repository into your 
 ### Create environment
 You can run the following command to install all the packages listed in the requirements.txt:
 
-    conda create --name dlcv-hw4 python=3.8
-    conda activate dlcv-hw4
+    conda create --name dlcv4 python=3.8
+    conda activate dlcv4
     pip3 install -r requirements.txt
 
 
@@ -22,7 +22,7 @@ You can run the following command to install all the packages listed in the requ
     
 ### Check all package environment
 
-    conda list -n dlcv-hw4
+    conda list -n dlcv4
 
 ### Close an environment
 

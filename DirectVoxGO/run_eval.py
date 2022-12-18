@@ -23,7 +23,7 @@ def config_parser():
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('--config', required=True,
                         help='config file path')
-                        
+
     parser.add_argument('--json_dir', required=True,
                         help='path to the transform_test.json. (e.g., */*/transform_test.json)')    
     parser.add_argument('--output_dir', required=True,
@@ -324,7 +324,6 @@ if __name__=='__main__':
             model_class = dvgo.DirectVoxGO
         model = utils.load_model(model_class, ckpt_path).to(device)
         stepsize = cfg.fine_model_and_render.stepsize
-
         render_viewpoints_kwargs = {
             'model': model,
             'ndc': cfg.data.ndc,

@@ -58,10 +58,12 @@ def load_blender_data(basedir, half_res=False, testskip=1, json_dir=None):
         skip = 1
         # read image based on json file.
         for frame in meta['frames'][::skip]:
-            fname = os.path.join(basedir, frame['file_path'] + '.png')
-            print(fname)
-            imgs.append(imageio.imread(fname))
+            # fname = os.path.join(basedir, frame['file_path'] + '.png')
+            # print(fname)
+            # imgs.append(imageio.imread(fname))
+            imgs.append(np.zeros([800, 800, 3]))
             poses.append(np.array(frame['transform_matrix']))
+
         imgs = (np.array(imgs) / 255.).astype(np.float32) # keep all 4 channels (RGBA)
         poses = np.array(poses).astype(np.float32)
         counts.append(counts[-1] + imgs.shape[0])

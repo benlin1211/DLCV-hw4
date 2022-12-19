@@ -3,7 +3,7 @@
 
 python3 DirectVoxGO/run_eval.py --json_dir $1 --output_dir $2 --config ./train4_1_config_blender.py --render_val --render_only
 
-# bash hw4_1.sh './hw4_data_test/hotdog/transforms_test.json' './output_p1/'
+# bash hw4_1.sh './hw4_json_only/hotdog/transforms_test.json' './output_p1/'
 #
 # # $1: path to the transform_test.json (e.g., */*/transform_test.json)
 # # which contains camera poses with the same format as in transfor_train.json, you should predict novel views base on this file.

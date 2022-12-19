@@ -18,16 +18,16 @@ def my_load_data(args, json_dir):
     print(args)
     if args.dataset_type == 'blender':
         images, poses, render_poses, hwf = load_blender_data(args.datadir, args.half_res, args.testskip, json_dir)
-        print('Loaded blender', images.shape, render_poses.shape, hwf, args.datadir)
+        # print('Loaded blender', images.shape, render_poses.shape, hwf, args.datadir)
 
         near, far = 2., 6.
         
-        print(images.shape)
-        if images.shape[-1] == 4:
-            if args.white_bkgd:
-                images = images[...,:3]*images[...,-1:] + (1.-images[...,-1:])
-            else:
-                images = images[...,:3]*images[...,-1:]
+        # print(images.shape)
+        # if images.shape[-1] == 4:
+        #     if args.white_bkgd:
+        #         images = images[...,:3]*images[...,-1:] + (1.-images[...,-1:])
+        #     else:
+        #         images = images[...,:3]*images[...,-1:]
 
     else:
         raise NotImplementedError(f'Unknown dataset type {args.dataset_type} exiting')

@@ -13,6 +13,7 @@ You can run the following command to install all the packages listed in the requ
 
     conda create --name dlcv4 python=3.8
     conda activate dlcv4
+    conda install pyg -c pyg
     pip3 install -r requirements.txt
 
 

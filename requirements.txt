@@ -1,3 +1,4 @@
+# first conda install pyg -c pyg
 numpy==1.23.3
 scipy
 tqdm
@@ -12,7 +13,7 @@ torch_efficient_distloss
 torch==1.12.1+cu102
 --find-links https://download.pytorch.org/whl/torch_stable.html   
 ninja
-# torch-scatter
+# torch-scatter 
 einops
 foliantcontrib.imagemagick
 

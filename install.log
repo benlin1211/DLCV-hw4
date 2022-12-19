@@ -1,0 +1,86 @@
+Defaulting to user installation because normal site-packages is not writeable
+Looking in links: https://download.pytorch.org/whl/torch_stable.html
+Collecting numpy==1.23.3
+  Using cached numpy-1.23.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (17.1 MB)
+Collecting scipy
+  Downloading scipy-1.9.3-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (33.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 33.7/33.7 MB 201.2 kB/s eta 0:00:00
+Collecting tqdm
+  Using cached tqdm-4.64.1-py2.py3-none-any.whl (78 kB)
+Collecting lpips
+  Using cached lpips-0.1.4-py3-none-any.whl (53 kB)
+Collecting mmcv
+  Using cached mmcv-1.7.0.tar.gz (593 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting Pillow==9.2.0
+  Downloading Pillow-9.2.0-cp310-cp310-manylinux_2_28_x86_64.whl (3.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.2/3.2 MB 187.4 kB/s eta 0:00:00
+Collecting imageio==2.22.4
+  Using cached imageio-2.22.4-py3-none-any.whl (3.4 MB)
+Collecting imageio-ffmpeg
+  Using cached imageio_ffmpeg-0.4.7-py3-none-manylinux2010_x86_64.whl (26.9 MB)
+Collecting opencv-python==4.6.0.66
+  Using cached opencv_python-4.6.0.66-cp36-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (60.9 MB)
+Collecting torch_efficient_distloss
+  Using cached torch_efficient_distloss-0.1.3.tar.gz (6.3 kB)
+  Preparing metadata (setup.py): started
+  Preparing metadata (setup.py): finished with status 'done'
+Collecting torch==1.12.1+cu102
+  Downloading https://download.pytorch.org/whl/cu102/torch-1.12.1%2Bcu102-cp310-cp310-linux_x86_64.whl (776.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 776.3/776.3 MB 4.6 MB/s eta 0:00:00
+Collecting ninja
+  Using cached ninja-1.11.1-py2.py3-none-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (145 kB)
+Collecting einops
+  Using cached einops-0.6.0-py3-none-any.whl (41 kB)
+Collecting foliantcontrib.imagemagick
+  Using cached foliantcontrib.imagemagick-1.0.2-py3-none-any.whl (4.9 kB)
+Collecting matplotlib==3.6.1
+  Downloading matplotlib-3.6.1-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (11.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.8/11.8 MB 210.3 kB/s eta 0:00:00
+Collecting torchvision==0.13.1
+  Downloading https://download.pytorch.org/whl/rocm5.1.1/torchvision-0.13.1%2Brocm5.1.1-cp310-cp310-linux_x86_64.whl (69.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 69.8/69.8 MB 14.0 MB/s eta 0:00:00
+Collecting typing-extensions
+  Using cached typing_extensions-4.4.0-py3-none-any.whl (26 kB)
+Requirement already satisfied: pyparsing>=2.2.1 in /usr/lib/python3/dist-packages (from matplotlib==3.6.1->-r requirements.txt (line 18)) (2.4.7)
+Collecting cycler>=0.10
+  Using cached cycler-0.11.0-py3-none-any.whl (6.4 kB)
+Collecting packaging>=20.0
+  Using cached packaging-22.0-py3-none-any.whl (42 kB)
+Collecting contourpy>=1.0.1
+  Downloading contourpy-1.0.6-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (296 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 296.1/296.1 kB 248.1 kB/s eta 0:00:00
+Collecting fonttools>=4.22.0
+  Using cached fonttools-4.38.0-py3-none-any.whl (965 kB)
+Requirement already satisfied: python-dateutil>=2.7 in /usr/lib/python3/dist-packages (from matplotlib==3.6.1->-r requirements.txt (line 18)) (2.8.1)
+Collecting kiwisolver>=1.0.1
+  Downloading kiwisolver-1.4.4-cp310-cp310-manylinux_2_12_x86_64.manylinux2010_x86_64.whl (1.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.6/1.6 MB 191.5 kB/s eta 0:00:00
+Requirement already satisfied: requests in /usr/lib/python3/dist-packages (from torchvision==0.13.1->-r requirements.txt (line 19)) (2.25.1)
+Collecting addict
+  Using cached addict-2.4.0-py3-none-any.whl (3.8 kB)
+Requirement already satisfied: pyyaml in /usr/lib/python3/dist-packages (from mmcv->-r requirements.txt (line 5)) (5.4.1)
+Collecting yapf
+  Using cached yapf-0.32.0-py2.py3-none-any.whl (190 kB)
+Collecting foliant>=1.0.4
+  Using cached foliant-1.0.13-py3-none-any.whl (15 kB)
+Collecting prompt_toolkit<3.0,>=2.0
+  Using cached prompt_toolkit-2.0.10-py3-none-any.whl (340 kB)
+Collecting cliar<2.0.0,>=1.3.2
+  Using cached cliar-1.3.5-py3-none-any.whl (6.5 kB)
+Collecting wcwidth
+  Using cached wcwidth-0.2.5-py2.py3-none-any.whl (30 kB)
+Requirement already satisfied: six>=1.9.0 in /usr/lib/python3/dist-packages (from prompt_toolkit<3.0,>=2.0->foliant>=1.0.4->foliantcontrib.imagemagick->-r requirements.txt (line 16)) (1.16.0)
+Building wheels for collected packages: mmcv, torch_efficient_distloss
+  Building wheel for mmcv (setup.py): started
+  Building wheel for mmcv (setup.py): finished with status 'done'
+  Created wheel for mmcv: filename=mmcv-1.7.0-py2.py3-none-any.whl size=914105 sha256=b16d5cbaac5d45f26132f5597a1c1bbae30235d8ad3f5ed678265ec4d69e4e6d
+  Stored in directory: /home/zhong/.cache/pip/wheels/cb/4c/e5/ce748ff67c221a3c67ce380e295689eaf34933ab5b951bab70
+  Building wheel for torch_efficient_distloss (setup.py): started
+  Building wheel for torch_efficient_distloss (setup.py): finished with status 'done'
+  Created wheel for torch_efficient_distloss: filename=torch_efficient_distloss-0.1.3-py3-none-any.whl size=7343 sha256=b83d8619ee6d402d9e2539fa7fa956cdfc4154c85363838682f1e6a7c81ae590
+  Stored in directory: /home/zhong/.cache/pip/wheels/50/48/7e/5b62fe0a4d09ac1d9ff1a23b870a9ae35dc9b6ac6ade316f0c
+Successfully built mmcv torch_efficient_distloss
+Installing collected packages: yapf, wcwidth, torch_efficient_distloss, ninja, addict, typing-extensions, tqdm, prompt_toolkit, Pillow, packaging, numpy, kiwisolver, imageio-ffmpeg, fonttools, einops, cycler, cliar, torch, scipy, opencv-python, imageio, foliant, contourpy, torchvision, mmcv, matplotlib, foliantcontrib.imagemagick, lpips
+Successfully installed Pillow-9.2.0 addict-2.4.0 cliar-1.3.5 contourpy-1.0.6 cycler-0.11.0 einops-0.6.0 foliant-1.0.13 foliantcontrib.imagemagick-1.0.2 fonttools-4.38.0 imageio-2.22.4 imageio-ffmpeg-0.4.7 kiwisolver-1.4.4 lpips-0.1.4 matplotlib-3.6.1 mmcv-1.7.0 ninja-1.11.1 numpy-1.23.3 opencv-python-4.6.0.66 packaging-22.0 prompt_toolkit-2.0.10 scipy-1.9.3 torch-1.12.1+cu102 torch_efficient_distloss-0.1.3 torchvision-0.13.1+rocm5.1.1 tqdm-4.64.1 typing-extensions-4.4.0 wcwidth-0.2.5 yapf-0.32.0
